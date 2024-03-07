@@ -1,9 +1,14 @@
 .hero{
     padding-top: 284px;
     padding-bottom: 280px;
+    & .hero-content {
+        width: 108%;
+    }
     h1{
         @include linearGradient2;
         @include linearGradientTxt;
+        text-transform: uppercase;
+       font-weight: 900;
     }
     h2{
         background: rgb(25,249,195);
