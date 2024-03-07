@@ -1,0 +1,177 @@
+/* Banner CSS */
+
+.banner {
+    padding-top: 260px;
+    padding-bottom: 153px;
+    position: relative;
+    background-image: url("../img/hero-right-top.png");
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position: top right;
+    z-index: 1;
+    @include mmd {
+        padding-bottom: 140px;
+        padding-top: 120px;
+        background-size: contain;
+    }
+    @include sm {
+        padding-bottom: 30px;
+        padding-top: 120px;
+        background-size: contain;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 0;
+        width: 760.96px;
+        height: 373.49px;
+        background: $primary;
+        filter: blur(347px);
+        transform: rotate(-46.62deg);
+        z-index: -1;
+        border-radius: 100%;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 1859px;
+        height: 800px;
+        background-image: url("../img/hero-shap-1.png");
+        opacity: 100;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top left;
+        z-index: -1;
+    }
+    & .banner-wrapper{
+        &::before {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            width: 359.73px;
+            height: 308.57px;
+            left: -92.66px;
+            background: $primary;
+            filter: blur(347px);
+            z-index:-1;
+            border-radius: 50%;
+        }  
+    }
+    &-content {
+        
+        position: relative;
+        z-index: 99;
+        & span {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 160%;
+            text-transform: uppercase;
+            color: $primary;
+            margin-bottom: 0;
+            @include mmd{
+                font-size: 18px; 
+                margin-top: 50px;
+            }
+
+        }
+        & p {
+            margin-bottom: 40px;
+            @include font-22;
+            padding-right: 12%;
+            @include ssm{
+                padding-right: 0%;
+            }
+        }
+        & .base-btn {
+            font-weight: 700;
+            min-width: 212px;
+            background: $primary;
+            color: $white;
+            margin-right: 34px;
+            &:hover{
+                background: $white;
+                color: $primary;
+            }
+            @include lg{
+                margin-bottom: 30px;
+            }
+            @include mmd{
+                margin-bottom: 30px;
+            }
+        }
+        & ul{
+            & li{
+                a{
+                    img{
+                        max-width: 30px;
+                        @include sm{
+                            max-width: 22px;
+                        }
+                    }
+                    svg{
+                        font-size: 30px;
+                            color: $white;
+                            fill:$white;
+                            @include sm{
+                                font-size: 22px;
+                            }
+                    }
+                    background: rgba(252, 0, 0, 0.1);
+                    border: 1.5px solid rgba(252, 0, 0, 0.2);
+                    border-radius: 50%;
+                    padding: 18px;
+                    display: inline-block;
+                    &:hover{
+                        background: $primary;
+                    }
+                }
+                display: inline-block;
+                margin-right: 34px;
+                margin-bottom: 15px;
+                @include sm{
+                    margin-right: 15px;
+                }
+
+            }
+        }
+        & .btn-with-social{
+            & .social-links{
+                display: inline-block;
+            }
+        }
+    }
+    &-img {
+        position: relative;
+        z-index: 1;
+        @include mmd {
+            max-width: 83%;
+            margin: auto;
+            margin-top: 80px;
+            text-align: center;
+        }
+        & img{
+            max-width: 591px;
+           
+        }
+       
+    }
+    & .banner-right-img{
+        margin-right: -15%;
+        @include xl{
+        margin-right: 0;
+        }
+        @include lg{
+        margin-right: 0;
+        }
+        @include mmd{
+        margin-right: 0;
+        }
+    }
+    
+}
+
+
+/* Banner CSS */
