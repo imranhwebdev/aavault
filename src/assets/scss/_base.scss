@@ -138,3 +138,25 @@ input::-webkit-inner-spin-button {
         color:$_hover;
     }
 }
+
+.social-links{
+    position: fixed;
+    top: 30%;
+    right: 12%;
+    z-index: 99;
+    li{
+        margin-bottom: 32px;
+        a{
+            display: flex;
+            border:2px solid #fff;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            img{
+                max-width: 30px;
+            }
+        }
+    }
+}

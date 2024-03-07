@@ -34,21 +34,6 @@
     & .navbar-brand{
         max-width: 226px;
     }
-    & .base-btn{
-        color: $white;
-        font-size: 18px;
-        font-weight: 700;
-        padding: 16px 48px;
-        line-height: 27px;
-        &:hover{
-            background: $primary;
-            color: #fff !important;
-        }
-        @include mmd{
-            display: inline-block;
-            margin-top: 20px;
-        }
-    }
 }
 
 .navbar-nav  {

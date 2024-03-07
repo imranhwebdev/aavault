@@ -1,0 +1,24 @@
+.hero{
+    padding-top: 284px;
+    padding-bottom: 280px;
+    h1{
+        @include linearGradient2;
+        @include linearGradientTxt;
+    }
+    h2{
+        background: rgb(25,249,195);
+        background: linear-gradient(133deg, rgba(25,249,195,1) 0%, rgba(41,217,59,1) 100%);
+        @include linearGradientTxt;
+        @include font-98;
+        font-family: "Bruno Ace SC", sans-serif;
+    }
+    .hero-right{
+        position: relative;
+        z-index: 1;        
+        p{
+           @include font-22;
+           font-weight: 600;
+           color: $_CFCED8; 
+        }
+    }
+}

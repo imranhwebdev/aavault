@@ -2,22 +2,12 @@ import { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
 import FooterLogo from '../assets/img/footer-logo.svg'
-import { FaTwitter, FaPaperPlane,  FaDiscord } from "react-icons/fa";
+import twitter from '../assets/img/twitter.svg'
+import telegrame from '../assets/img/tlegram.svg'
+import discord from '../assets/img/discord.svg'
 export default function Footer(){
-    const [validated, setValidated] = useState(false);
-
-    const handleSubmit = (event) => {
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-        event.preventDefault();
-        event.stopPropagation();
-        }
-
-        setValidated(true);
-    };
-
+  
     const newLetterTitle = "JOIN THE waitlist";
     const footerMenuItems = [
         {
@@ -57,15 +47,15 @@ export default function Footer(){
     ];
     const footerSocialItems = [
         {
-            socialIcon: <FaTwitter />,
+            socialIcon: twitter,
             socialLink: "https://google.com",
         },
         {
-            socialIcon:  <FaPaperPlane />,
+            socialIcon:  telegrame,
             socialLink: "https://google.com",
         },
         {
-            socialIcon:  <FaDiscord />,
+            socialIcon:  discord,
             socialLink: "https://google.com",
         },
     ];
@@ -80,20 +70,11 @@ export default function Footer(){
                 <Col>
                     <div className="newsLetter text-center">
                         <h4>{newLetterTitle}</h4>
-                        <Form.Group controlId="validationCustomUsername">
-                            <InputGroup hasValidation>
-                                <Form.Control
-                                type="email"
-                                placeholder="Enter you email"
-                                aria-describedby="inputGroupPrepend"
-                                required
-                                />
-                                <Button id="inputGroupPrepend">{submitIcon}</Button>
-                                <Form.Control.Feedback type="invalid">
-                                Enter you email
-                                </Form.Control.Feedback>
-                            </InputGroup>
-                        </Form.Group>
+                        <Form>
+                            <input type="email" placeholder="Enter you email"
+                            required />
+                            <Button type="submit">{submitIcon}</Button>
+                        </Form>
                     </div>
                 </Col>
             </Row>
@@ -105,13 +86,11 @@ export default function Footer(){
                                 <img src={FooterLogo} alt="" />
                             </figure>
                         </a>
-                        <div className='footer-social-logos'>
-                            <ul>
-                                {footerSocialItems.map((footerSocialItem, index) => (
-                                    <li key={index}><a target='_blank' href={footerSocialItem.socialLink}>{footerSocialItem.socialIcon} </a></li>
-                                ))}
-                            </ul>
-                        </div>
+                        <ul className='footerSLogos'>
+                            {footerSocialItems.map((footerSocialItem, index) => (
+                                <li key={index}><a target='_blank' href={footerSocialItem.socialLink}><img src={footerSocialItem.socialIcon} alt="" /> </a></li>
+                            ))}
+                        </ul>
                     </div>
                 </Col>
                 <Col lg={8}>
