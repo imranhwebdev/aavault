@@ -12,19 +12,34 @@ div::-webkit-scrollbar {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: $primary;
+    background: linear-gradient(78.65deg, rgba(25, 249, 195, 0.95) 8.37%, #29D93B 86.44%);
     border-radius: 20px;
 }
 div::-webkit-scrollbar-thumb {
-    background: $primary;
+    background: linear-gradient(78.65deg, rgba(25, 249, 195, 0.95) 8.37%, #29D93B 86.44%);
 }
   
 body {
+    position: relative;
+    z-index: 1;
     font-family: "Montserrat", sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 1.6;
-    background-color: #17151E;
+    background-color: #000000;
+    &::after{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../img/Noise-Texture.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        z-index: -1;
+    }
 }
 
 h1,
@@ -148,15 +163,46 @@ input::-webkit-inner-spin-button {
         margin-bottom: 32px;
         a{
             display: flex;
-            border:2px solid #fff;
-            width: 48px;
-            height: 48px;
+            border: 1px solid #0D4614;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             justify-content: center;
             align-items: center;
             img{
-                max-width: 30px;
+                max-width: 16px;
             }
         }
+    }
+}
+
+.subscribeForm{
+    position: relative;
+    & input{
+        background-color: #000000;
+        color: $white !important;
+        border-radius: 44px !important;
+        padding: 15px 19px;
+        height: 64px;
+        @include font-18;
+        width: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.20);
+        background: rgba(0, 0, 0, 0.60);
+    }
+    & input::placeholder{
+        color: $white !important;
+        text-transform: capitalize;
+        opacity: 20%;
+    }
+    & button{
+        position: absolute;
+        right: 9px;
+        top: 50%;
+        transform: translateY(-50%);
+        @include linearGradient;
+        border-radius: 30px !important;
+        width: 86px;
+        height: 48px;
+        z-index: 99;
     }
 }

@@ -70,10 +70,10 @@ export default function Footer(){
                 <Col>
                     <div className="newsLetter text-center">
                         <h4>{newLetterTitle}</h4>
-                        <Form>
+                        <Form className='subscribeForm'>
                             <input type="email" placeholder="Enter you email"
                             required />
-                            <Button type="submit">{submitIcon}</Button>
+                            <Button type="submit" className='gBtn'>{submitIcon}</Button>
                         </Form>
                     </div>
                 </Col>
