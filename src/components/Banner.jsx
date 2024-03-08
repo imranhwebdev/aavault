@@ -24,7 +24,22 @@ export default function Banner(){
             socialIcon: discord,
             socialLink: "https://google.com",
         },
-    ]
+    ];
+
+    const arrowDown = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="28" viewBox="0 0 20 28" fill="none">
+    <rect x="19.2367" y="0.748612" width="25.5789" height="18.4737" rx="9.23684" transform="rotate(90 19.2367 0.748612)" stroke="url(#paint0_linear_4035_329)" stroke-width="1.42105"/>
+    <path d="M9.49758 20.4352C9.77506 20.7127 10.2249 20.7127 10.5024 20.4352L15.0242 15.9135C15.3017 15.636 15.3017 15.1861 15.0242 14.9086C14.7467 14.6312 14.2968 14.6312 14.0193 14.9086L10 18.928L5.98065 14.9086C5.70318 14.6312 5.2533 14.6312 4.97582 14.9086C4.69834 15.1861 4.69834 15.636 4.97582 15.9135L9.49758 20.4352ZM9.28947 0.0380858L9.28947 19.9328L10.7105 19.9328L10.7105 0.038086L9.28947 0.0380858Z" fill="url(#paint1_linear_4035_329)"/>
+    <defs>
+      <linearGradient id="paint0_linear_4035_329" x1="46.9473" y1="8.99071" x2="31.9311" y2="9.5568" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#19ECB1"/>
+        <stop offset="1" stop-color="white" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="paint1_linear_4035_329" x1="10" y1="19.9328" x2="10" y2="0.0380859" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#1CE897"/>
+        <stop offset="1" stop-color="white" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+  </svg>
     return(
         <div className="hero">
             <figure className="heroTopShap">
@@ -51,6 +66,15 @@ export default function Banner(){
                     <Col lg={5}>
                         <div className="hero-right">
                             <p>{desc}</p>
+                        </div>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <div className="scrollDown text-center">
+		                    <a href='#about' class="mouse"></a>
+                            <p>Scroll down</p>
+                            <a href='#about'>{arrowDown}</a>
                         </div>
                     </Col>
                 </Row>
