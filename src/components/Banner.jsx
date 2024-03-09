@@ -74,7 +74,7 @@ export default function Banner(){
                         <div className="scrollDown text-center">
 		                    <a href='#about' class="mouse"></a>
                             <p>Scroll down</p>
-                            <a href='#about'>{arrowDown}</a>
+                            <a href='#about' className='down'>{arrowDown}</a>
                         </div>
                     </Col>
                 </Row>
@@ -84,6 +84,7 @@ export default function Banner(){
                     <li key={index}><a href={socialItem.socialLink}><img src={socialItem.socialIcon} alt="" /></a></li>
                 ))}
             </ul>
+            
         </div>
     )
 }

@@ -1,8 +1,11 @@
 .hero{
     padding-top: 284px;
-    padding-bottom: 280px;
+    padding-bottom: 175px;
     position: relative;
     z-index: 1;
+    @include mmd{
+        padding-bottom: 100px;
+    }
     &:before{
         position: absolute;
         content: "";
@@ -16,6 +19,19 @@
         background-size: cover;
         z-index: -1;
     }
+    &::after{
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        width: 361px;
+        height: 323px;
+        background-image: url("../img/heroBLShap.png");
+        background-position: bottom left;
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: -2;
+    }
     & .heroTopShap {
         position: absolute;
         top: 0;
@@ -25,7 +41,7 @@
     }
     .heroRImg {
         position: absolute;
-        top: 8%;
+        top: 8.5%;
         left: 45%;
         max-width: 630px;
         z-index: -2;
@@ -64,7 +80,7 @@
             font-weight: 400;
             font-family: "Bruno Ace SC", sans-serif;
             text-shadow: 0px 4px 8.6px rgba(0, 0, 0, 0.25);
-            -webkit-text-stroke-width: 3;
+            -webkit-text-stroke-width: 3px;
             -webkit-text-stroke-color: #000;
 
 
@@ -168,6 +184,4 @@
     }
     
 }
-
-
 

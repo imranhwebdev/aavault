@@ -139,6 +139,14 @@
     }
 }
 
+@mixin font-16 {
+    font-size: 16px;
+    line-height: 160%;
+    @include mmd {
+        font-size: 15px;
+    }
+}
+
 @mixin font-14 {
     font-size: 14px;
     line-height: 160%;

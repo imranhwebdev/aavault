@@ -1,0 +1,99 @@
+.about{
+    position: relative;
+    z-index: 1;
+    &::before{
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 5%;
+        width: 638px;
+        height: 638px;
+        background-image: url("../img/aboutCircleShap.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top left;
+        z-index: -1;
+    }
+    .aboutRshap{
+        position: absolute;
+        right: 0;
+        top: -65%;
+        width: 373.457px;
+        height: 369.616px;
+        z-index: -1;
+        @include mmd{
+            top: -15%;
+            width: 273.457px;
+            height: 269.616px;
+        }
+    }
+    h4{
+        font-weight: 900;
+        line-height: 117.7%; /* 21.186px */
+        letter-spacing: 0.9px;
+        text-transform: uppercase;
+        background: linear-gradient(93deg, #02FE85 0%, #02FED1 18%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 62px;
+    }
+    h2{
+        text-shadow: 0px 4px 8.6px rgba(0, 0, 0, 0.25);
+        font-weight: 800;
+        line-height: 135%;
+        text-transform: uppercase;
+        background: linear-gradient(90deg, #22E16E -112.46%, #FFF 71.85%);
+        background-clip: text;
+        -webkit-background-clip: text;  
+        -webkit-text-fill-color: transparent;
+        span{
+            font-weight: 400;
+            line-height: 135%;
+        }
+    }
+    p{
+       color: $_D9D9D9; 
+       font-weight: 500;
+       margin-bottom: 30px;
+       padding-left: 80px;
+       @include mmd{
+        padding-left: 0;
+       }
+    }
+    .inlineBtn{
+        margin-left: 80px;
+        @include mmd{
+         margin-left: 0;
+        }
+        svg{
+            margin-left: 10px;
+        }
+    }
+    .about-left{
+        position: relative;
+        z-index: 1;
+        .aboutImg{
+            max-width: 501px;
+        }
+        .aboutShap{
+            max-width: 500px;
+            position: absolute;
+            right: -170px;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+    
+    & .about-right {
+        position: relative;
+        margin-left: -30px;
+        @include mmd{
+            margin-left: 0;
+        }
+        .aboutCshap{
+            text-align: center;
+            margin: 0 auto -30px;
+        }
+    }
+}

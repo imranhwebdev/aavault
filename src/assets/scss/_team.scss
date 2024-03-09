@@ -1,0 +1,71 @@
+.outTeam{
+    padding-top: 100px;
+    .section-title{
+        max-width: 893px;
+        margin: 0 auto 42px;
+    }
+    .ourTeam-wrapper{
+        .single-team-item{
+            border-radius: 25px;
+            border: 4px solid rgba(24, 29, 28, 0.40);
+            padding: 16px;
+            gap: 100px;
+            margin-bottom: 32px;
+            .team-content{
+                border-radius: 24.188px;
+                background: linear-gradient(90deg, rgba(18, 22, 20, 0.90) 1.62%, rgba(0, 0, 0, 0.00) 98.51%);
+                max-width: 632px;
+                padding: 32px;
+                h3{
+                    color: $white;
+                    text-shadow: 0px 3.225px 6.934px rgba(0, 0, 0, 0.25);
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    margin-bottom: 8px;
+                    display: block;
+                }
+                span{
+                    color: $_B9E7DC;
+                    @include font-16;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    margin-bottom: 16px;
+                    display: block;
+                }
+                p{
+                    color: $_8C8C8C;
+                    @include font-16;
+                    text-transform: capitalize;
+                    font-family: "Inter", sans-serif;
+                    max-width: 600px;
+                }
+                a{
+                    margin-top: 32px;
+                    display: inline-block;
+                    padding: 14px 24px;
+                    font-size: 16.125px;
+                    font-weight: 700;
+                    line-height: 160%;
+                    text-transform: capitalize;
+                    background: linear-gradient(79deg, rgba(25, 249, 195, 0.95) 8.37%, #29D93B 86.44%);
+                    @include linearGradientTxt;
+                    border-radius: 77px;
+                    border: 1px solid rgba(25, 249, 195, 0.95);
+                    background-color: #181818;
+                    img{
+                        max-width: 32px;
+                        margin-right: 16px;
+                    }
+                }
+            }
+            .team-img{
+                max-width: 504px;
+                border-radius: 25.8px;
+                background: linear-gradient(180deg, #0A0A0A 0%, #061C16 100%);
+            }
+        }
+        .single-team-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+    }
+}
