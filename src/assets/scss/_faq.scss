@@ -1,0 +1,98 @@
+.faqArea{
+    padding-top: 77px;
+    padding-bottom: 60px;
+    .faqWrapper{
+        padding: 48px 60px;
+        border-radius: 26.75px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        &::before{
+            @include beforeAfter;
+            background: #5b58581a;
+            border: 3px solid rgba(255, 255, 255, 0.50);
+            filter: blur(334.3756103515625px);
+            border-radius: 26.75px;
+            z-index: -1;
+
+        }
+        &::after{
+            @include beforeAfter;
+            border: 3px solid rgba(255, 255, 255, 0.50);
+            border-radius: 26.75px;
+            opacity: 0.1;
+            z-index: -1;
+
+        }
+    }
+
+    & .accordion-item {
+        background: transparent;
+        border: 0;
+        padding: 40px 0px;
+        border-bottom: 2px solid rgba(91, 120, 101, 0.4);
+        &::last-child{
+            border-bottom: 0;
+        }
+        @include sm {
+            padding: 20px 10px;
+            border-radius: 10px !important;
+        }
+        & .accordion-button {
+            color: rgba(255, 255, 255, 0.70);
+            @include font-28;
+            font-weight: 700;
+            line-height: 140%;
+            text-transform: capitalize;
+            padding: 0;
+            width: max-content;
+            flex-direction: row-reverse;
+            gap: 32px;
+        }
+        & .accordion-body {
+            color: $_8C8C8C;
+            @include font-22;
+            font-weight: 500;
+            text-transform: capitalize;
+            line-height: 170%;
+            padding-left: 90px;
+            max-width: 95%;
+            padding-bottom: 0;
+            @include sm {
+                max-width: 100%;
+            }
+        }
+    }
+    & .accordion-item:last-child{
+        border: 0 !important;
+        padding-bottom: 5px;
+    }
+    & .accordion {
+        --bs-accordion-border-color: transparent;
+        --bs-accordion-btn-focus-border-color: transparent;
+        --bs-accordion-btn-focus-box-shadow: 0 0 0 0rem transparent;
+        --bs-accordion-inner-border-radius: 10px - 10px;
+    }
+    .accordion-button:not(.collapsed)::after {
+        background-image: url('../img/minus.svg');
+        @include transition;
+    }
+    .accordion-button::after {
+        background-image: url('../img/plus.svg');
+        @include transition;
+        background-size: 66px;
+        width: 66px;
+        height: 66px;
+    }
+    
+    h2.accordion-header {
+        background: transparent !important;
+    }
+    
+    button.accordion-button {
+        background: transparent !important;
+    }
+    
+}
+
+
