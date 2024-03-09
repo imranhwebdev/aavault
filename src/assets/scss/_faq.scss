@@ -1,6 +1,38 @@
 .faqArea{
     padding-top: 77px;
     padding-bottom: 60px;
+    position: relative;
+    z-index: 1;
+    &::before{
+        @include beforeAfter;
+        background-image: url('../img/faq-shap1.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top left;
+        z-index: -1;
+        top: -37%;
+        @include mmd{
+            width: 300px;
+            height: 400px;
+            top: -5%;
+        }
+    }
+    &::after{
+        @include beforeAfter;
+        left: auto;
+        right: 0;
+        background-image: url('../img/faq-shap2.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top right;
+        z-index: -1;
+        top: -32%;
+        @include mmd{
+            width: 300px;
+            height: 400px;
+            top: -80px;
+        }
+    }
     .faqWrapper{
         padding: 48px 60px;
         border-radius: 26.75px;
@@ -24,6 +56,9 @@
             z-index: -1;
 
         }
+        @include sm{
+            padding: 40px 30px;
+        }
     }
 
     & .accordion-item {
@@ -34,9 +69,9 @@
         &::last-child{
             border-bottom: 0;
         }
+
         @include sm {
-            padding: 20px 10px;
-            border-radius: 10px !important;
+            padding: 30px 10px;
         }
         & .accordion-button {
             color: rgba(255, 255, 255, 0.70);
@@ -48,6 +83,9 @@
             width: max-content;
             flex-direction: row-reverse;
             gap: 32px;
+            @include sm {
+                gap: 15px;
+            }
         }
         & .accordion-body {
             color: $_8C8C8C;
@@ -60,6 +98,7 @@
             padding-bottom: 0;
             @include sm {
                 max-width: 100%;
+                padding-left: 0px;
             }
         }
     }
@@ -83,6 +122,11 @@
         background-size: 66px;
         width: 66px;
         height: 66px;
+        @include sm{
+            background-size: 36px !important;
+            width: 36px !important;
+            height: 36px !important;
+        }
     }
     
     h2.accordion-header {

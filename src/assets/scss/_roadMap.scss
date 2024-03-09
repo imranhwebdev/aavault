@@ -1,0 +1,8 @@
+.roadMap{
+    .section-title{
+        h2{
+            background: linear-gradient(90deg, #22E16E -112.46%, #FFF 71.85%);
+            @include linearGradientTxt
+        }
+    }
+}

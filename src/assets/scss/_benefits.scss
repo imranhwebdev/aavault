@@ -1,0 +1,69 @@
+.benefitsArea{
+    position: relative;
+    z-index: 1;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    .section-title{
+        margin-bottom: 30px;
+        .subTitle{
+            font-family: "Montserrat", sans-serif;
+            font-weight: 900;
+            line-height: 117.7%; /* 21.186px */
+            letter-spacing: 0.9px;
+            text-transform: uppercase;
+            @include linearGradient;
+            background: linear-gradient(94deg, #02FE85 13.88%, #02FED1 53%);
+            @include linearGradientTxt;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+    }
+    &::before{
+        position: absolute;
+        content: "";
+        left: 13%;
+        top: 3%;
+        width: 651.433px;
+        height: 555.923px;
+        flex-shrink: 0;
+        background-image: url("../img/benefitShap1.png");
+        z-index: -1;
+    }
+    & .benefits-wrapper{
+        display: grid;
+        grid-template-columns:repeat( auto-fit, minmax(330px, 1fr) );
+        border-top: 2px solid rgba(255, 255, 255, 0.1);
+        border-left: 2px solid rgba(255, 255, 255, 0.1);
+        & .benefits-single-item{
+            border-right: 2px solid rgba(255, 255, 255, 0.1);
+            border-bottom: .5px solid rgba(255, 255, 255, 0.1);
+            padding: 48px 30px;
+            h4{
+                background: linear-gradient(90deg, #22E16E -112.46%, #FFF 71.85%);
+               @include linearGradientTxt; 
+               display: inline-block;
+               margin-bottom: 95px;
+            }
+            figure{
+                max-width: 236px;
+                margin: 0 auto;
+            }
+        }
+    }
+    .benefit-content-wrapper{
+        border-top:2px solid rgba(255, 255, 255, 0.1);
+        border-bottom:2px solid rgba(255, 255, 255, 0.1);
+        .content-inner{
+            display: grid;
+            grid-template-columns:repeat( auto-fit, minmax(330px, 1fr));
+            .single-c-item{
+                padding: 24px;
+                p{
+                   color: $_8C8C8C; 
+                   font-weight: 500;
+                   font-size: 14px;
+                }
+            }
+        }
+    }
+}

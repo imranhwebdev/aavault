@@ -49,7 +49,7 @@ export default function OurTeam() {
             <Col>
                 <div className="ourTeam-wrapper">
                     {OurTeamItems.map((OurTeamItem, index) => (
-                        <div className="single-team-item d-flex justify-content-between">
+                        <div className="single-team-item d-flex justify-content-between" key={index}>
                             <div className="team-content">
                                 <h3>{OurTeamItem.teamName}</h3>
                                 <span>{OurTeamItem.desicnation}</span>

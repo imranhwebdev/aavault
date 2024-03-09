@@ -70,15 +70,13 @@
             background: rgb(25,249,195);
             text-transform: uppercase;
             background: linear-gradient(133deg, rgba(25,249,195,1) 0%, rgba(41,217,59,1) 100%);
-            @include linearGradientTxt;
+            text-shadow: 0px 4px 8.6px rgba(0, 0, 0, 0.25);
             @include font-98;
             font-weight: 400;
             font-family: "Bruno Ace SC", sans-serif;
-            text-shadow: 0px 4px 8.6px rgba(0, 0, 0, 0.25);
-            -webkit-text-stroke-width: 3px;
-            -webkit-text-stroke-color: #000;
-
-
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-stroke: 6px transparent;
         }
         .subscribeForm{
             margin-top: 32px;

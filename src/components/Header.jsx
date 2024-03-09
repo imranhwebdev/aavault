@@ -25,11 +25,11 @@ export default function Header(){
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto">
-                        <Link to="about"  spy={true} smooth={true} offset={50} duration={500} >About Us</Link>
-                        <Link to="benefits" spy={true} smooth={true} offset={50} duration={500} >Benefits</Link>
-                        <Link to="contact" spy={true} smooth={true} offset={50} duration={500} >Tokenomics</Link>
-                        <Link to="contact" spy={true} smooth={true} offset={50} duration={500} >Roadmap</Link>
-                        <Link to="contact" spy={true} smooth={true} offset={50} duration={500} >Team</Link>
+                        <Link to="about"  spy={true} smooth={true} offset={-120} duration={170} >About Us</Link>
+                        <Link to="benefits" spy={true} smooth={true} offset={-150} duration={170} >Benefits</Link>
+                        <Link to="tokenomics" spy={true} smooth={true} offset={-150} duration={170} >Tokenomics</Link>
+                        <Link to="roadmap" spy={true} smooth={true} offset={-150} duration={170} >Roadmap</Link>
+                        <Link to="team" spy={true} smooth={true} offset={-150} duration={170} >Team</Link>
                     </Nav>
                     <a href="/" className='boxedBtn'>Join Waitlist</a>
                     </Navbar.Collapse>
