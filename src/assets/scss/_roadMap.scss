@@ -1,8 +1,102 @@
 .roadMap{
+    padding-top: 200px;
+    padding-bottom: 250px;
+    position: relative;
+    z-index: 1;
+    &::before{
+        @include beforeAfter;
+        width: 400px;
+        height: 775px;
+        background-image: url('../img/roadmapLeftShap.png');
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: contain;
+        z-index: -1;
+    }
+    &::after{
+        @include beforeAfter;
+        left: auto;
+        right: 0;
+        top: auto;
+        bottom: 10%;
+        width: 180px;
+        height: 565px;
+        background-image: url('../img/roadmaprightShap.png');
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: contain;
+        z-index: -1;
+    }
     .section-title{
         h2{
             background: linear-gradient(90deg, #22E16E -112.46%, #FFF 71.85%);
-            @include linearGradientTxt
+            @include linearGradientTxt;
+            margin-bottom: 40px;
         }
+    }
+    .roadMap-wrapper {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(220px, 1fr) );
+        row-gap: 30px;
+        & .roadmap-single-item{
+            max-width: 265px;
+            margin-bottom: 60px;
+            h4{
+                background: linear-gradient(90deg, #22E16E -112.46%, #FFF 71.85%); 
+                @include linearGradientTxt;
+                font-weight: 700;
+                line-height: 135%;
+                text-transform: uppercase;
+            }
+            ul{
+                li{
+                    color: $_7A807F;
+                    font-weight: 500;
+                    @include font-16;
+                    padding-left: 36px;
+                    position: relative;
+                    z-index: 1;
+                    margin-bottom: 10px;
+                    &::before{
+                        position: absolute;
+                        content: "";
+                        top: 8px;
+                        left: 20px;
+                        width: 8px;
+                        height: 8px;
+                        background-image: url('../img/mapListDot.svg');
+                        background-repeat: no-repeat;
+                        background-size: contain;
+
+                    }
+                }
+            }
+        }
+        .roadmap-single-item:nth-child(2) {
+            margin-top: 60px;
+            margin-bottom: 10px;
+            margin-left: -20px;
+        }
+        .roadmap-single-item:nth-child(3) {
+            margin-top: -20px;
+            margin-bottom: 10px;
+            width: 280px;
+            margin-left: -10px;
+        }
+        .roadmap-single-item:nth-child(4) {
+            margin-top: -60px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+        .roadmap-single-item:nth-child(5) {
+            margin-top: -130px;
+            margin-bottom: 10px;
+        }
+    }
+    .roadmap-Shap{
+        position: absolute;
+        bottom: 85px;
+        left: 70px;
+        z-index: -1;
     }
 }

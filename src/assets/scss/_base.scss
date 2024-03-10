@@ -123,6 +123,9 @@ input::-webkit-inner-spin-button {
    padding-left: 15px;
    padding-right: 15px;
    margin: 0 auto;
+   @include mmd{
+        max-width: 748px;
+   }
 }
 
 .boxedBtn{

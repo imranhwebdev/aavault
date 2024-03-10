@@ -17,7 +17,7 @@ export default function Header(){
             window.addEventListener("scroll", setFixed)
          return(
         <header className={fix ? 'heading fixed' : 'heading'}>
-            <Navbar collapseOnSelect expand="lg">
+            <Navbar collapseOnSelect expand="md">
                 <Container>
                     <Navbar.Brand href="/">
                         <img src={logo} alt="" />
