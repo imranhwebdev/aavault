@@ -71,7 +71,7 @@ export default function RoadMap() {
           </Col>
         </Row>
       </Container>
-      <figure className='roadmap-Shap'>
+      <figure className='roadmap-Shap d-none d-md-block'>
         <img src={roadmapShap} alt="" />
       </figure>
     </section>

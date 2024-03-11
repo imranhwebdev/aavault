@@ -42,6 +42,7 @@ export default function Banner(){
   </svg>
     return(
         <div className="hero">
+            <p className='siteC'>AAVAULT MULTI BLOCKCHAIN</p>
             <figure className="heroTopShap">
                 <img src={heroTopShap} alt="" />
             </figure>
@@ -51,11 +52,14 @@ export default function Banner(){
             </figure>
             <Container>
                 <Row className='align-items-end'>
-                    <Col lg={7}>
+                    <Col md={7}>
                         <div className="hero-content">
                             <span>{subTitle}</span>
                             <h1>{title}</h1>
                             <h2 className='newWay'>New Way</h2>
+                            <div className="hero-right d-md-none">
+                                <p>{desc}</p>
+                            </div>
                             <Form className='subscribeForm'>
                                 <input type="email" placeholder="Enter you email"
                                 required />
@@ -63,7 +67,7 @@ export default function Banner(){
                             </Form>
                         </div>
                     </Col>
-                    <Col lg={5}>
+                    <Col md={5} className='d-none d-md-block'>
                         <div className="hero-right">
                             <p>{desc}</p>
                         </div>
@@ -71,7 +75,7 @@ export default function Banner(){
                 </Row>
                 <Row>
                     <Col>
-                        <div className="scrollDown text-center">
+                        <div className="scrollDown text-center d-none d-md-block">
 		                    <a href='#about' class="mouse"></a>
                             <p>Scroll down</p>
                             <a href='#about' className='down'>{arrowDown}</a>

@@ -8,4 +8,7 @@
             column-gap: 40px;
         }
     }
+    @include mmd{
+        display: none;
+    }
 }

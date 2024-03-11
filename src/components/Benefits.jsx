@@ -10,14 +10,17 @@ export default function Benefits() {
         {
             bsTitle:"Safety",
             bsImg: bsImg1,
+            desc:"We guarantee full data protection and confidentiality. Your information is a cosmic secret with us",
         },
         {
             bsTitle:"Tools",
             bsImg: bsImg2,
+            desc:"Users can set stop losses and take profits, protecting against losses and maximizing profits like on CEX",
         },
         {
             bsTitle:"Convenience",
             bsImg: bsImg3,
+            desc:"Trade effortlessly with our automatic audit feature, guarding you from scams and ensuring security",
         },
     ];
     const bsCitems = [
@@ -36,7 +39,7 @@ export default function Benefits() {
       <Container>
         <Row>
             <Col>
-                <div className="section-title text-center">
+                <div className="section-title text-md-center">
                     <span className='subTitle'>{subtitle}</span>
                     <h2 dangerouslySetInnerHTML={{ __html: title }} />
                 </div>
@@ -51,13 +54,16 @@ export default function Benefits() {
                             <figure>
                                 <img src={bsItem.bsImg} alt="" />
                             </figure>
+                            <div className="single-c-item d-md-none" key={index}>
+                                <p>{bsItem.desc}</p>
+                            </div>
                         </div>
                     ))}
                 </div>
             </Col>
         </Row>
       </Container>
-      <div className="benefit-content-wrapper">
+      <div className="benefit-content-wrapper d-none d-md-block">
         <Container>
             <Row>
                 <Col>

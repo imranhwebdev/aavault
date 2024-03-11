@@ -3,6 +3,22 @@
     padding-bottom: 250px;
     position: relative;
     z-index: 1;
+    @include xl{
+        padding-top: 120px;
+        padding-bottom: 180px;
+    }
+    @include lg{
+        padding-top: 120px;
+        padding-bottom: 180px;
+    }
+    @include md{
+        padding-top: 120px;
+        padding-bottom: 180px;
+    }
+    @include sm{
+        padding-top: 120px;
+        padding-bottom: 0px;
+    }
     &::before{
         @include beforeAfter;
         width: 400px;
@@ -12,6 +28,16 @@
         background-position: top left;
         background-size: contain;
         z-index: -1;
+        @include mmd{
+            width: 200px;
+            height: 375px;
+
+        }
+        @include sm{
+            left: auto;
+            right: 0;
+            transform: scale(-1);
+        }
     }
     &::after{
         @include beforeAfter;
@@ -26,6 +52,11 @@
         background-position: top left;
         background-size: contain;
         z-index: -1;
+        @include sm{
+            right: auto;
+            left: 0;
+            transform: scale(-1);
+        }
     }
     .section-title{
         h2{
@@ -37,10 +68,27 @@
     .roadMap-wrapper {
         display: grid;
         grid-template-columns: repeat( auto-fit, minmax(220px, 1fr) );
-        row-gap: 30px;
+        @include lg{
+            grid-template-columns: repeat( auto-fit, minmax(125px, 1fr) );
+        }
+        @include md{
+            grid-template-columns: repeat( auto-fit, minmax(125px, 1fr) );
+        }
+        @include sm{
+            grid-template-columns: 1fr;
+        }
         & .roadmap-single-item{
             max-width: 265px;
             margin-bottom: 60px;
+            padding-left: 20%;
+            padding-bottom: 40px;
+            @include md{
+                max-width: 190px;
+            }
+            @include sm{
+                max-width: 100%;
+                margin-bottom: 0px;
+            }
             h4{
                 background: linear-gradient(90deg, #22E16E -112.46%, #FFF 71.85%); 
                 @include linearGradientTxt;
@@ -57,6 +105,10 @@
                     position: relative;
                     z-index: 1;
                     margin-bottom: 10px;
+                    word-wrap: break-word;
+                    @include lg{                        
+                        width: 90%;
+                    }
                     &::before{
                         position: absolute;
                         content: "";
@@ -76,21 +128,41 @@
             margin-top: 60px;
             margin-bottom: 10px;
             margin-left: -20px;
+            @include sm{
+                margin-left: 0;
+                margin-bottom: 0;
+                margin-top: 0;
+            }
         }
         .roadmap-single-item:nth-child(3) {
             margin-top: -20px;
             margin-bottom: 10px;
             width: 280px;
             margin-left: -10px;
+            @include sm{
+                margin-left: 0;
+                margin-bottom: 0;
+                margin-top: 0;
+                width: 100%;
+            }
         }
         .roadmap-single-item:nth-child(4) {
             margin-top: -60px;
             margin-bottom: 10px;
             margin-left: 10px;
+            @include sm{
+                margin-left: 0;
+                margin-bottom: 0;
+                margin-top: 0;
+            }
         }
         .roadmap-single-item:nth-child(5) {
             margin-top: -130px;
             margin-bottom: 10px;
+            @include sm{
+                margin-bottom: 0;
+                margin-top: 0;
+            }
         }
     }
     .roadmap-Shap{
@@ -98,5 +170,20 @@
         bottom: 85px;
         left: 70px;
         z-index: -1;
+        @include md{
+            left: 0;
+            transform: scale(1.1);
+        }
+    }
+    .roadmap-Shap img {
+        @include xxl{
+            scale: 1.25;
+        }
+        @include xl{
+            scale: 1.25;
+        }
+        @include lg{
+            scale: 1.25;
+        }
     }
 }

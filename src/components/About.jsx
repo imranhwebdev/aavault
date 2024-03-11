@@ -35,14 +35,20 @@ export default function About() {
 </svg>
   return (
     <div className="about" id="about">
+      <p className='siteC'>AAVAULT MULTI BLOCKCHAIN</p>
         <figure className="aboutRshap">
             <img src={aboutRshap} alt="" />
         </figure>
         <Container>
           <Row>
-            <Col lg={5}>
+            <Col className="d-md-none">
               <div className="about-left">
-                <h4>About</h4>
+                <h4>{subtitle}</h4>
+              </div>
+            </Col>
+            <Col md={5} className="order-md-1 order-2">
+              <div className="about-left">
+              <h4 className="d-none d-md-block">{subtitle}</h4>
                 <figure className="aboutImg">
                     <img src={aboutImg} alt="" />
                 </figure>
@@ -51,7 +57,7 @@ export default function About() {
                 </figure>
               </div>
             </Col>
-            <Col lg={7}>
+            <Col md={7} className="order-md-2 order-1">
               <div className="about-right">
               <h2 dangerouslySetInnerHTML={{ __html: title }} />
               <figure className="aboutCshap">{aboutRShap}</figure>

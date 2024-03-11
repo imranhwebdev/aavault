@@ -15,7 +15,7 @@
         width: 40px;
         height: 40px;
     }
-    @include mmd {
+    @include sm {
         .navbar-collapse {
             background: $black;
             padding: 25px;
@@ -35,9 +35,33 @@
     }
     & .navbar-brand{
         max-width: 226px;
+        @include lg{
+            max-width: 170px;
+        }
+        @include md{
+            max-width: 135px;
+        }
+        @include sm{
+            max-width: 113px;
+        }
     }
     & .boxedBtn{
         margin-left: 20px;
+        @include lg{
+            font-size: 14px;
+            padding: 10px 20px;
+        }
+        @include md{
+            font-size: 12px;
+            padding: 6px 14px;
+            margin-left: 10px;
+        }
+        @include sm{
+            font-size: 12px;
+            padding: 10px 20px;
+            margin-left: 0px;
+           margin-top: 15px;
+        }
     }
 }
 
@@ -54,6 +78,14 @@
         &.active,
         &:focus {
             color: $white !important;
+        }
+        @include lg{
+            padding: 5px 15px;
+            font-size: 16px;
+        }
+        @include md{
+            padding: 5px 10px;
+            font-size: 14px;
         }
     }
     
