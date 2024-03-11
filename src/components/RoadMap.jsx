@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import roadmapShap from '../assets/img/roadmapShap.png';
-
+import roadMapTokenShap from "../assets/img/roadLtokenS.png"
 export default function RoadMap() {
   const title = "ROADMAP";
 
@@ -50,6 +50,9 @@ export default function RoadMap() {
 
   return (
     <section className='roadMap' id='roadmap'>
+    <figure className="roadMapTokenShap">
+      <img src={roadMapTokenShap} alt="" />
+    </figure>
       <Container>
         <Row>
           <Col>

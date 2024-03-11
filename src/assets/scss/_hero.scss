@@ -45,7 +45,7 @@
         left: 0;
         width: 361px;
         height: 323px;
-        background-image: url("../img/heroBLShap.png");
+        background-image: url("../img/faq-shap1.png");
         background-position: bottom left;
         background-repeat: no-repeat;
         background-size: contain;
@@ -186,6 +186,9 @@
                     line-height: 9.26px;
                     right: 4px;
                     top: 51%;
+                }
+                &:hover{
+                    background: linear-gradient(220deg, rgba(25, 249, 195, 0.95) 8.37%, #29D93B 86.44%);
                 }
             }
         }

@@ -80,7 +80,7 @@
         & .roadmap-single-item{
             max-width: 265px;
             margin-bottom: 60px;
-            padding-left: 20%;
+            padding-left: 0;
             padding-bottom: 40px;
             @include md{
                 max-width: 190px;
@@ -88,6 +88,7 @@
             @include sm{
                 max-width: 100%;
                 margin-bottom: 0px;
+                padding-left: 20%;
             }
             h4{
                 background: linear-gradient(90deg, #22E16E -112.46%, #FFF 71.85%); 
@@ -184,6 +185,21 @@
         }
         @include lg{
             scale: 1.25;
+        }
+    }
+    .roadMapTokenShap{
+        position: absolute;
+        left: 0;
+        top: 310px;
+        width: 185px;
+        height: 152px;
+        z-index: -1;
+        @include sm{
+            left: auto;
+            width: 120px;
+            right: 0;
+            top: 130px;
+            transform: scale(-1);
         }
     }
 }
