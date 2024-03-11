@@ -3,7 +3,6 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import heroTopShap from '../assets/img/heroTop-shap.png'
-import heroRightImg from '../assets/img/hero-right-img.png'
 export default function Banner(){
     const subTitle = "WELCOME TO AAVAULT";
     const title = "Discover DEX Trading in a";
@@ -31,9 +30,6 @@ export default function Banner(){
                 <img src={heroTopShap} alt="" />
             </figure>
             
-            <figure className='heroRImg'>
-                <img src={heroRightImg} alt="" />
-            </figure>
             <Container>
                 <Row className='align-items-end'>
                     <Col md={7}>
