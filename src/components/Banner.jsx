@@ -54,7 +54,7 @@ export default function Banner(){
                 <Row className='align-items-end'>
                     <Col md={7}>
                         <div className="hero-content">
-                            <span>{subTitle}</span>
+                            <span className='subTitle'>{subTitle}</span>
                             <h1>{title}</h1>
                             <h2 className='newWay'>New Way</h2>
                             <div className="hero-right d-md-none">

@@ -1,6 +1,6 @@
 .hero{
     padding-top: 284px;
-    padding-bottom: 175px;
+    padding-bottom: 275px;
     position: relative;
     z-index: 1;
     @include lg{
@@ -96,6 +96,8 @@
             width: 100%;
         }
         span {
+            position: relative;
+            z-index: 1;
             padding: 13px 24px;
             display: inline-block;
             font-weight: 500;
@@ -103,8 +105,6 @@
             line-height: 21.19px;
             letter-spacing: 5%;
             background: linear-gradient(78.65deg, rgba(25, 249, 195, 0.95) 8.37%, #29D93B 86.44%);
-            border: 2px solid transparent;
-            border-image: linear-gradient(to right, #19F9C3, rgba(41, 217, 59, 0.13)) 12;
             border-radius: 25px; 
             -webkit-background-clip: padding-box;
             background-clip: padding-box;
@@ -115,11 +115,25 @@
                 font-size: 12px;
             }
             @include sm{
-                padding: 6px 8px;
+                padding: 6px 25px;
                 font-size: 10px;
                 margin-bottom: 20px;
             }
+            &::before{
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url(../img/subtitleShap.png);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-position: center center;
+                z-index: -1;
+            }
         }
+        
         
         h1{
             background: linear-gradient(90.35deg, #22E16E -112.49%, #FFFFFF 65.05%);
@@ -192,6 +206,7 @@
                 }
             }
         }
+       
     }
     
     .hero-right{
