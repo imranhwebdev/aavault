@@ -4,27 +4,11 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import heroTopShap from '../assets/img/heroTop-shap.png'
 import heroRightImg from '../assets/img/hero-right-img.png'
-import twitter from '../assets/img/twitter.svg'
-import tlegram from '../assets/img/tlegram.svg'
-import discord from '../assets/img/discord.svg'
 export default function Banner(){
     const subTitle = "WELCOME TO AAVAULT";
     const title = "Discover DEX Trading in a";
     const desc = 'AAVAULT is revolutionizing decentralized exchanges (DEX) by incorporating the finest trading tools available';
-    const socialItems = [
-        {
-            socialIcon: twitter,
-            socialLink: "https://google.com",
-        },
-        {
-            socialIcon: tlegram,
-            socialLink: "https://google.com",
-        },
-        {
-            socialIcon: discord,
-            socialLink: "https://google.com",
-        },
-    ];
+   
 
     const arrowDown = <svg xmlns="http://www.w3.org/2000/svg" width="20" height="28" viewBox="0 0 20 28" fill="none">
     <rect x="19.2367" y="0.748612" width="25.5789" height="18.4737" rx="9.23684" transform="rotate(90 19.2367 0.748612)" stroke="url(#paint0_linear_4035_329)" stroke-width="1.42105"/>
@@ -83,12 +67,6 @@ export default function Banner(){
                     </Col>
                 </Row>
             </Container>
-            <ul className="social-links">
-                {socialItems.map((socialItem, index) => (
-                    <li key={index}><a href={socialItem.socialLink}><img src={socialItem.socialIcon} alt="" /></a></li>
-                ))}
-            </ul>
-            
         </div>
     )
 }
