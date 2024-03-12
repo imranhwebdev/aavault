@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import ReactPlayer from 'react-player';
 // import aboutImg from "../assets/img/token.png";
-import coinVideo from "../assets/img/about.mp4";
+import aboutImg from "../assets/img/3-unscreen.gif";
 import aboutShap from "../assets/img/aboutShap.png";
 import aboutRshap from "../assets/img/aboutRShap.svg";
 export default function About() {
@@ -37,11 +37,11 @@ export default function About() {
 </svg>;
 
 
- const [key, setKey] = useState(0);
+//  const [key, setKey] = useState(0);
 
- const handleVideoEnded = () => {
-   setKey((prevKey) => prevKey + 1);
- };
+//  const handleVideoEnded = () => {
+//    setKey((prevKey) => prevKey + 1);
+//  };
   return (
     <div className="about" id="about">
       <p className='siteC'>AAVAULT MULTI BLOCKCHAIN</p>
@@ -59,7 +59,8 @@ export default function About() {
               <div className="about-left">
               <h4 className="d-none d-md-block">{subtitle}</h4>
                 <figure className="aboutImg">
-                    <ReactPlayer
+                <img src={aboutImg} alt="" />
+                    {/* <ReactPlayer
                       key={key}
                       url={coinVideo} // replace with your video URL
                       playing={true}
@@ -70,7 +71,7 @@ export default function About() {
                       muted={true}  // Set muted to true for autoplay
                       onEnded={handleVideoEnded}
                       controls={false} 
-                    />
+                    /> */}
                 </figure>
 
                 <figure className="aboutShap">
