@@ -1,13 +1,12 @@
 import React, { useRef, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import "swiper/css";
 import { Autoplay} from 'swiper/modules';
 import bsImg1 from "../assets/img/bsImg1.png";
 import bsImg2 from "../assets/img/bsImg2.png";
 import bsImg3 from "../assets/img/bsImg3.svg";
+import bsImg4 from "../assets/img/bsImg4.svg";
 export default function Benefits() {
     const subtitle = "Benefits";
     const title = "Discover the <br> <span>advantages</span> of AAVAULT";
@@ -28,9 +27,9 @@ export default function Benefits() {
             desc:"Trade effortlessly with our automatic audit feature, guarding you from scams and ensuring security",
         },
         {
-            bsTitle:"Convenience",
-            bsImg: bsImg2,
-            desc:"Trade effortlessly with our automatic audit feature, guarding you from scams and ensuring security",
+            bsTitle:"Speed",
+            bsImg: bsImg4,
+            desc:"Capture tokens instantly, never miss a market move",
         },
     ];
     const bsCitems = [
