@@ -29,7 +29,7 @@
         width: 373.457px;
         height: 369.616px;
         z-index: -1;
-        animation: zoom-in-out 5s ease-in-out infinite;
+        animation: zoom-in-out 4s ease-in-out infinite;
         @include mmd{
             top: -15%;
             width: 273.457px;
@@ -126,6 +126,9 @@
             right: -60px;
             bottom: -90px;
             z-index: -1;
+            @include sm{
+                opacity: .5;
+            }
         }
     }
     

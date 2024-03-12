@@ -8,6 +8,9 @@
     border-top: 3px solid rgba(255, 255, 255, 0.146);
     border-bottom: 3px solid rgba(255, 255, 255, 0.146);
   }
+  @include sm {
+    padding-bottom: 40px;
+  }
   &::before {
     @include beforeAfter;
     background-image: url("../img/faq-shap1.png");
@@ -57,6 +60,10 @@
     @include mmd {
       padding-left: 0;
       padding-right: 0;
+      padding-bottom: 0;
+    }
+    @include mmd {
+      padding-top: 25px;
       padding-bottom: 0;
     }
     &::before {
@@ -113,6 +120,7 @@
       }
       @include sm {
         gap: 15px;
+        font-weight: 600;
       }
     }
     & .accordion-body {

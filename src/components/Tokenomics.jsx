@@ -9,9 +9,8 @@ export default function Tokenomics() {
   const title = "AAVAULT IS THE <br> NATIVE <span>currency</span> ";
   const desc =
     "Maximize your experience with the $AAVL token: enjoy exclusive access, reduced fees, staking rewards, and DAO governance. Join the whitelist for a chance to be part of our journey.";
-
-  const totalSupply = 500;
   const data = {
+    // labels: ["Private", "Serie A", "Airdrop (Tasks)", "Team and Advisers", "DAO", "Liquidity", "Foundation", "Reserves"],
     labels: false,
     datasets: [
       {
@@ -27,23 +26,7 @@ export default function Tokenomics() {
       },
     ],
   };
-  const options = {
-    plugins: {
-      legend: {
-        display: true,
-        position: "bottom", // Change the position of the legend as needed
-      },
-    },
-    cutoutPercentage: 70,
-    elements: {
-      center: {
-        text: `${totalSupply} MILLION\nTOTAL SUPPLY`, // Center text with total supply value
-        color: "#000000", // Text color
-        fontStyle: "Arial", // Font style
-        sidePadding: 20, // Padding around the text
-      },
-    },
-  };
+ 
   const chartItmes = [
     {
       title:"Private",
@@ -124,7 +107,7 @@ export default function Tokenomics() {
                 <span>TOTAL SUPPLY</span>
                 <h3>10 Billion</h3>
               </div>
-              <Doughnut data={data} options={options} />
+              <Doughnut data={data} />
               
             </div>
           </Col>

@@ -41,13 +41,8 @@
         top: 0%;
     }
     @include sm {
-        background-image: url("../img/benefitRsShap.png");
-        left: 0;
-        top: 50%;
-        opacity: .2;
-        transform: translateY(-50%);
-        background-position: left center;
-        background-size: 110%;
+        top: 5%;
+        opacity: .6;
     }
   }
   & .benefits-wrapper {
@@ -65,6 +60,7 @@
       border-right: 2px solid rgba(255, 255, 255, 0.1);
       border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
       padding: 48px 30px;
+      height: 100%;
       @include xl {
         padding: 35px 20px;
       }

@@ -10,6 +10,10 @@
     @include sm {
         padding-top: 15px;
     }
+    .navbar-toggler{
+        border: 0;
+        padding: 0;
+    }
     & .navbar-toggler-icon {
         background-image: url('../img/menuBar.svg');
         width: 40px;

@@ -12,6 +12,10 @@
   @include md {
     padding-top: 20px;
   }
+  @include sm {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   .section-title {
     max-width: 893px;
     margin: 0 auto 42px;

@@ -50,6 +50,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-bottom: 24px;
     }
 
   }
@@ -58,6 +59,9 @@
     margin: 0 auto 80px;
     @include mmd {
       margin: 0 auto 40px;
+    }
+    @include sm {
+      margin: 0 auto 48px;
     }
     h4 {
       margin-bottom: 22px;
@@ -138,11 +142,12 @@
     margin-bottom: 32px;
     
     @include sm{
-      padding-bottom: 30px;
+      padding-bottom: 20px;
       display: block;
       columns: 2;
       -webkit-columns: 2;
       -moz-columns: 2;
+      margin-bottom: 20px;
     }
     li {
       a {
