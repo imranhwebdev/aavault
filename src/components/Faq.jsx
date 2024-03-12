@@ -35,7 +35,7 @@ export default function Faq() {
               <div className="section-title">
                 <h2 dangerouslySetInnerHTML={{ __html: title }} />
               </div>
-              <Accordion defaultActiveKey={accordionData[0].id.toString()}>
+              <Accordion>
                 {accordionData.map(item => (
                   <Accordion.Item key={item.id} eventKey={item.id.toString()}>
                     <Accordion.Header className="text-wrap">{item.title}</Accordion.Header>

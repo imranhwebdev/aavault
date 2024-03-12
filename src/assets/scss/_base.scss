@@ -215,8 +215,8 @@ input::-webkit-inner-spin-button {
 }
 
 .social-links {
-  position: fixed;
-  top: 30%;
+  position: absolute;
+  top: 25%;
   right: 12%;
   z-index: 99;
   @include lg{
@@ -238,8 +238,12 @@ input::-webkit-inner-spin-button {
       border-radius: 50%;
       justify-content: center;
       align-items: center;
+      transition: all .3s;
       img {
         max-width: 16px;
+      }
+      &:hover{
+        transform: rotate(360deg);
       }
     }
   }
