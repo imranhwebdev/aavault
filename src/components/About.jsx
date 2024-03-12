@@ -65,7 +65,7 @@ export default function About() {
                       playing={true}
                       loop={true}
                       width="100%"
-                      height="512px"
+                      height="100%"
                       style={{ maxWidth: '100%', height: 'auto' }}
                       muted={true}  // Set muted to true for autoplay
                       onEnded={handleVideoEnded}

@@ -44,7 +44,7 @@
         background-image: url("../img/benefitRsShap.png");
         left: 0;
         top: 50%;
-        opacity: .3;
+        opacity: .2;
         transform: translateY(-50%);
         background-position: left center;
         background-size: 110%;
@@ -98,6 +98,10 @@
       figure {
         max-width: 236px;
         margin: 0 auto;
+        img{
+          height: 260px;
+          object-fit: contain;
+        }
       }
     }
   }
@@ -106,7 +110,7 @@
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     .content-inner {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
       @include md {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       }

@@ -17,7 +17,7 @@
     background-image: url("../img/footerLShap.png");
     background-repeat: no-repeat;
     background-position: bottom left;
-    background-size: auto;
+    background-size: contain;
     @include mmd {
       background-size: contain;
     }
@@ -33,7 +33,7 @@
     background-image: url("../img/footerRightShap.png");
     background-repeat: no-repeat;
     background-position: bottom right;
-    background-size: auto;
+    background-size: contain;
     @include mmd {
       background-size: contain;
     }

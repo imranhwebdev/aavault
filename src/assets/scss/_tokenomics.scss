@@ -5,6 +5,9 @@
   @include md{
     padding-top: 50px;
   }
+  @include sm{
+    padding-top: 100px;
+  }
   &::before{
     @include beforeAfter;
     right: 0;
@@ -24,6 +27,7 @@
     margin-bottom: 48px;
     @include sm{
         text-align: center;
+        margin-bottom: 10px;
     }
     .subTitle {
       background: linear-gradient(94deg, #02fe85 13.88%, #02fed1 53%);

@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import roadmapShap from '../assets/img/roadmapShap.png';
 import roadMapTokenShap from "../assets/img/roadLtokenS.png"
+import dot from "../assets/img/Dot.png"
+import downArrow from "../assets/img/downArrow.png"
 export default function RoadMap() {
   const title = "ROADMAP";
 
@@ -50,7 +52,7 @@ export default function RoadMap() {
 
   return (
     <section className='roadMap' id='roadmap'>
-    <figure className="roadMapTokenShap">
+    <figure className="roadMapTokenShap d-none d-md-block">
       <img src={roadMapTokenShap} alt="" />
     </figure>
       <Container>
@@ -60,8 +62,11 @@ export default function RoadMap() {
               <h2>{title}</h2>
             </div>
             <div className="roadMap-wrapper">
+              <div className="line d-md-none"></div>
               {roadmapData.map((item, index) => (
                 <div key={index} className="roadmap-single-item">
+                  <div className="dot d-md-none"><img src={dot} alt="" /></div>
+                  <div className="downArrow d-md-none"><img src={downArrow} alt="" /></div>
                   <h4>- {item.quarter}</h4>
                   <ul className='listItem'>
                     {item.items.map((roadmapItem, idx) => (
