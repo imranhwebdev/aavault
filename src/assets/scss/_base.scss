@@ -281,6 +281,24 @@ input::-webkit-inner-spin-button {
     transition: all .3s ease-in-out;
     svg{
       margin-top: -3px;
+      position: absolute;
+      left: 25px;
+      animation: animateRf 1.8s infinite;
+      -webkit-animation: animateRf 2.5s infinite;
+      top: 55%;
+      transform: translate(-50%, -50%);
+      @keyframes animateRf {
+        to {
+            opacity: 0;
+            left: 60px;
+        }
+    }
+    @-webkit-keyframes animateRf {
+        to {
+            opacity: 0;
+            left: 60px;
+        }
+    }
     }
     &:hover{
       background: linear-gradient(220deg, rgba(25, 249, 195, 0.95) 8.37%, #29D93B 86.44%), linear-gradient(172deg, #3B36FF 13.87%, #8C89FF 79.76%, #FFF 120.95%);

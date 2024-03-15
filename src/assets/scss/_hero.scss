@@ -270,6 +270,17 @@
                 -webkit-animation: wheel 2s infinite;
             }
         }
+        .down{
+            position: relative;
+            svg {
+                position: absolute;
+                animation: scrollDown 1.8s infinite;
+                -webkit-animation: scrollDown 1.8s infinite;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
         p{
             margin-top: 12px;
             margin-bottom: 8px;
@@ -287,13 +298,27 @@
             top: 30px;
         }
     }
-    
     @-webkit-keyframes wheel {
         to {
             opacity: 0;
             top: 30px;
         }
     }
+    
+    @keyframes scrollDown {
+        to {
+            opacity: 0;
+            top: 25px;
+        }
+    }
+    @-webkit-keyframes scrollDown {
+        to {
+            opacity: 0;
+            top: 25px;
+        }
+    }
+    
+    
     .siteC{
         color: #FFF;
         font-family: "Syne", sans-serif;
