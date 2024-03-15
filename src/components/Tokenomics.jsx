@@ -15,41 +15,49 @@ export default function Tokenomics() {
         label:"Private",
         data: "12",
         value: "275 Million",
+        color: '#4286F5'
       },
       {
         label:"Serie A",
         data: "30",
         value: "150 Million ",
+        color: '#EA4235'
       },
       {
         label:"Airdrop (Tasks)",
         data: "5",
         value: "25 Million ",
+        color: '#FABD03'
       },
       {
         label:"Team and Advisers",
         data: "10",
         value: "25 Million ",
+        color: '#34A853'
       },
       {
         label:"DAO",
         data: "10",
         value: "25 Million ",
+        color: '#FF6D00'
       },
       {
         label:"Liquidity",
         data: "10",
         value: "25 Million ",
+        color: '#46BCC6'
       },
       {
         label:"Foundation",
         data: "10",
         value: "25 Million ",
+        color: '#7BABF7'
       },
       {
         label:"Reserves",
         data: "10",
         value: "25 Million ",
+        color: '#FF8278'
       },
     ];
   
