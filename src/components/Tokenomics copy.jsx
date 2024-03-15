@@ -13,42 +13,42 @@ export default function Tokenomics() {
     const chartData = [
       {
         label:"Private",
-        data: "12",
+        data: "(12%)",
         value: "275 Million",
       },
       {
         label:"Serie A",
-        data: "30",
+        data: "(30%)",
         value: "150 Million ",
       },
       {
         label:"Airdrop (Tasks)",
-        data: "5",
+        data: "(5%)",
         value: "25 Million ",
       },
       {
         label:"Team and Advisers",
-        data: "10",
+        data: "(10%)",
         value: "25 Million ",
       },
       {
         label:"DAO",
-        data: "10",
+        data: "(10%)",
         value: "25 Million ",
       },
       {
         label:"Liquidity",
-        data: "10",
+        data: "(10%)",
         value: "25 Million ",
       },
       {
         label:"Foundation",
-        data: "10",
+        data: "(10%)",
         value: "25 Million ",
       },
       {
         label:"Reserves",
-        data: "10",
+        data: "(10%)",
         value: "25 Million ",
       },
     ];
@@ -100,7 +100,7 @@ export default function Tokenomics() {
                 <div className="chart-d-item d-flex align-items-center justify-content-between" key={index}>
                 <div className="left">
                     <h5>{item.label}</h5>
-                    <span>({item.data}%)</span>
+                    <span>{item.data}</span>
                 </div>
                 <div className="right">
                   <p>{item.value}</p>

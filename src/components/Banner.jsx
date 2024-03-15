@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import heroTopShap from '../assets/img/heroTop-shap.png';
+import heroRgif from '../assets/img/hero.gif';
 import twitter from '../assets/img/twitter.svg'
 import tlegram from '../assets/img/tlegram.svg'
 import discord from '../assets/img/discord.svg'
@@ -52,6 +53,11 @@ export default function Banner(){
             <figure className="heroTopShap">
                 <img src={heroTopShap} alt="" />
             </figure>
+            
+            <figure className='mb-0 heroGif'>
+                <img src={heroRgif} alt="" />
+            </figure>
+            
             <ul className="social-links">
                 {socialItems.map((socialItem, index) => (
                     <li key={index}><a href={socialItem.socialLink}><img src={socialItem.socialIcon} alt="" /></a></li>

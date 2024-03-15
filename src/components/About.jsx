@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import aboutImg from "../assets/img/3-unscreen.gif";
+import aboutImg from "../assets/img/3.gif";
 import aboutShap from "../assets/img/aboutShap.png";
 import aboutRshap from "../assets/img/aboutRShap.svg";
 export default function About() {
