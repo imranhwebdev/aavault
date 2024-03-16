@@ -38,15 +38,22 @@
         }
     }
     & .navbar-brand{
-        max-width: 226px;
-        @include lg{
-            max-width: 170px;
+        img{
+            max-width: 45px;
+            @include md{
+                max-width: 35px;
+            }
         }
-        @include md{
-            max-width: 135px;
-        }
-        @include sm{
-            max-width: 113px;
+        background: linear-gradient(93deg, #19F9C3 3.88%, rgba(41, 217, 59, 0.05) 134.14%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 31px;
+        font-weight: 900;
+        line-height: 139%; /* 43.09px */
+        text-transform: uppercase;
+        @include mmd{
+            font-size: 20px;
         }
     }
     & .boxedBtn{

@@ -2,7 +2,7 @@ import { React, useState } from 'react'
 import {Container} from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import logo from '../assets/img/site-logo.svg'
+import logo from '../assets/img/logo.svg'
 import { Link, animateScroll as scroll} from 'react-scroll'
 
 export default function Header(){
@@ -20,7 +20,7 @@ export default function Header(){
             <Navbar collapseOnSelect expand="md">
                 <Container>
                     <Navbar.Brand href="/">
-                        <img src={logo} alt="" />
+                        <img src={logo} alt="" /> AAVAULT
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
