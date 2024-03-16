@@ -53,11 +53,6 @@ export default function Banner(){
             <figure className="heroTopShap">
                 <img src={heroTopShap} alt="" />
             </figure>
-            
-            <figure className='mb-0 heroGif'>
-                <img src={heroRgif} alt="" />
-            </figure>
-            
             <ul className="social-links">
                 {socialItems.map((socialItem, index) => (
                     <li key={index}><a href={socialItem.socialLink}><img src={socialItem.socialIcon} alt="" /></a></li>
@@ -83,13 +78,16 @@ export default function Banner(){
                     </Col>
                     <Col md={5} className='d-none d-md-block'>
                         <div className="hero-right">
+                            <figure className='mb-0 heroGif'>
+                                <img src={heroRgif} alt="" />
+                            </figure>
                             <p>{desc}</p>
                         </div>
                     </Col>
                 </Row>
                 <Row>
                     <Col>
-                        <div className="scrollDown text-center d-none d-md-block">
+                        <div className="scrollDown text-center d-none d-md-block mt-5">
 		                    <a href='#about' class="mouse"></a>
                             <p>Scroll down</p>
                             <a href='#about' className='down'>{arrowDown}</a>
