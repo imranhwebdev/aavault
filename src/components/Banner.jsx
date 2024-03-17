@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import heroTopShap from '../assets/img/heroTop-shap.png';
-import heroRgif from '../assets/img/hero.gif';
+import heroRgif from '../assets/img/heroGif2.gif';
 import twitter from '../assets/img/twitter.svg'
 import tlegram from '../assets/img/tlegram.svg'
 import discord from '../assets/img/discord.svg'
@@ -88,7 +88,6 @@ export default function Banner(){
                 <Row>
                     <Col>
                         <div className="scrollDown text-center d-none d-md-block mt-5">
-		                    <a href='#about' class="mouse"></a>
                             <p>Scroll down</p>
                             <a href='#about' className='down'>{arrowDown}</a>
                         </div>
