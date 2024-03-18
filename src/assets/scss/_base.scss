@@ -8,9 +8,15 @@ html body {
 
 ::-webkit-scrollbar {
   width: 8px;
+  @include sm{
+    display: none;
+  }
 }
 div::-webkit-scrollbar {
   width: 4px;
+  @include sm{
+    display: none;
+  }
 }
 
 ::-webkit-scrollbar-thumb {
@@ -20,6 +26,9 @@ div::-webkit-scrollbar {
     #29d93b 86.44%
   );
   border-radius: 20px;
+  @include sm{
+    display: none;
+  }
 }
 div::-webkit-scrollbar-thumb {
   background: linear-gradient(
@@ -27,6 +36,9 @@ div::-webkit-scrollbar-thumb {
     rgba(25, 249, 195, 0.95) 8.37%,
     #29d93b 86.44%
   );
+  @include sm{
+    display: none;
+  }
 }
 
 body {
