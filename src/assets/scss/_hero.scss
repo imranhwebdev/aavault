@@ -28,6 +28,9 @@
         background-repeat: no-repeat;
         background-size: contain;
         z-index: -1;
+        @include sm{
+            display: none;
+        }
     }
     &::after{
         position: absolute;

@@ -9,20 +9,23 @@
     background: rgba(43, 41, 57, 0.06);
     @include sm {
         padding-top: 15px;
+        border-bottom: 1px solid #1A1919;
+        background: #050505;
     }
     .navbar-toggler{
         border: 0;
         padding: 0;
     }
     & .navbar-toggler-icon {
-        background-image: url('../img/menuBar.svg');
+        background-image: url('../img/icons8-menu.svg');
         width: 40px;
         height: 40px;
     }
     @include sm {
         .navbar-collapse {
-            background: $black;
-            padding: 25px;
+            background: transparent;
+            padding: 25px 15px;
+            height: 100vh;
             & .navbar-nav {
                 & a {
                     border-bottom: 1px solid #f3f3f321;
@@ -71,7 +74,7 @@
             font-size: 12px;
             padding: 10px 20px;
             margin-left: 0px;
-           margin-top: 15px;
+           margin-top: 22px;
         }
     }
 }
