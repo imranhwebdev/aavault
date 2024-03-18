@@ -25,13 +25,15 @@
         .navbar-collapse {
             background: transparent;
             padding: 25px 15px;
-            height: 100vh;
             & .navbar-nav {
                 & a {
                     border-bottom: 1px solid #f3f3f321;
                     padding:15px 0px;
                 }
             }
+        }
+        .navbar-collapse.show {
+            height: 100vh;
         }
         & .navbar-nav {
             display: inherit;

@@ -62,12 +62,9 @@ body {
     }
     @include sm{
         background-size: contain;
-        top: 131px;
-        background-position: 100px top;
-    }
-    @include ssm{
-        background-size: 110%;
-        background-position: 20px top;
+        top: 0;
+        height: 50%;
+        background-position: top center;
     }
 }
   // &::after {
