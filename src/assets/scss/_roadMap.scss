@@ -183,7 +183,7 @@
             max-width: 1280px;
         }
         @include lg{
-            bottom: 130px;
+            bottom: 144px;
             max-width: 992px;
         }
         @include md{
@@ -333,21 +333,41 @@
         @include xll{
             transform: translateY(-24px);
         }
+        .dot{
+            @include llg{
+                transform: translateY(-23px);
+            }
+        }
         .arrowRight{
             top: 45px;
             transform: rotate(-11deg);
             animation: circle1 3s linear infinite;
          
+            @include xxl{
+                top: 37px;
+            }
             @include xl{
                 top: 31px;
             }
             @include xll{
                 top: 39px;
             }
+            @include llg{
+                top: 21px;
+            }
+            @include lg{
+                top: 30px;
+            }
+            @include md{
+                top: 28px;
+            }
             @keyframes circle1{
                 0% {
                     opacity: 0;
                     transform: rotate(18deg) translate(-20px, -2px) rotate(-15deg);
+                    @include md{
+                        transform: rotate(18deg) translate(-20px, -8px) rotate(-15deg);
+                    }
                 }
                 50% {
                     opacity: 1;
@@ -361,6 +381,9 @@
     }
     .dotArrow:nth-child(2){
         margin-bottom: -70px;
+        @include xxl{
+            margin-bottom: -50px;
+        }
         @include xl{
             margin-bottom: -36px;
         }
@@ -368,23 +391,39 @@
             margin-bottom: -26px;
         }
         @include lg{
-            margin-bottom: -44px;
+            margin-bottom: -38px;
+        }
+        @include llg{
+            margin-bottom: -25px;
         }
         @include md{
             margin-bottom: -35px;
         }
         .arrowRight{
-            top: 59px;
+            top: 44px;
             animation: circle2 3s linear infinite;
+            @include xxxl{
+                top: 59px;
+            }
             @include xxl{
-                top: 41px;
+                top: 44px;
             }
             
             @include xl{
                 top: 35px;
             }
             @include xll{
-                top: 30px;
+                top: 37px;
+            }
+            @include llg{
+                top: 39px;
+            }
+            
+            @include lg{
+                top: 39px;
+            }
+            @include md{
+                top: 40px;
             }
             
             @keyframes circle2{
@@ -419,6 +458,10 @@
     }
     .dotArrow:nth-child(3){
         margin-bottom: -73px;
+        @include xxl{
+            margin-bottom: -44px;
+        }
+        
         @include xl{
             margin-bottom: -26px;
         }
@@ -428,15 +471,18 @@
         }
         
         @include lg{
-            margin-bottom: -40px;
+            margin-bottom: -31px;
         }
         
         @include md{
             margin-bottom: -36px;
         }
         .arrowRight{
-            top: 17px !important;
+            top: 38px !important;
             animation: circle3 3s linear infinite;
+            @include xxxl{
+                top: 19px !important;
+            }
             @include xxl{
                 top: 0 !important;
             }
@@ -444,12 +490,24 @@
                 top: -1px !important;
             }
             @include xll{
-                top: -8px !important;
+                top: -4px !important;
+            }
+            @include llg{
+                top: 4px !important;
+            }
+            @include lg{
+                top: 6px !important;
+            }
+            @include md{
+                top: 18px !important;
             }
             @keyframes circle3{
                 0% {
                     opacity: 0;
                     transform: rotate(0deg) translate(-35px, 8px) rotate(-15deg);
+                    @include xxxl{
+                        transform: rotate(0deg) translate(-20px, 5px) rotate(-15deg);
+                    }
                     @include xll{
                         transform: rotate(0deg) translate(-20px, 0px) rotate(-15deg);
                     }
@@ -480,32 +538,55 @@
     .dotArrow:nth-child(4){
         margin-bottom: 0;
         margin-top: -22px;
+        @include xxl{
+            margin-top: -45px;
+        }
         @include xl{
             margin-top: -55px;
         }
+        
         
         @include xll{
             margin-bottom: 12px;
         }
         @include lg{
-            margin-bottom: -14px;
+            margin-bottom: 15px;
+        }
+        @include llg{
+            margin-bottom: 22px;
         }
         @include md{
-            margin-bottom: -34px;
+            margin-bottom: -3px;
         }
         .arrowRight{
-            top: -51px !important;
+            top: -36px !important;
             animation: circle4 3s linear infinite;
+            
+            @include xxxl{
+                top: -51px !important;
+            }
             @include xl{
                 top: -15px !important;
             }
             @include xll{
                 top: -40px !important;
             }
+            @include llg{
+                top: -54px !important;
+            }
+            @include lg{
+                top: -28px !important;
+            }
+            @include md{
+                top: -2px !important;
+            }
             @keyframes circle4{
                 0% {
                     opacity: 0;
                     transform: rotate(-6deg) translate(-20px, 5px) rotate(-35deg);
+                    @include xxxl{
+                        transform: rotate(-4deg) translate(-20px, 3px) rotate(-21deg);
+                    }
                     @include xl{
                         transform: rotate(-4deg) translate(-20px, -8px) rotate(-21deg);
                     }
@@ -539,7 +620,10 @@
         }
         
         @include lg{
-            margin-bottom: -38px;
+            margin-bottom: -60px;
+        }
+        @include llg{
+            margin-bottom: 10px;
         }
         
         @include md{
@@ -549,6 +633,9 @@
             top: -14px !important;
             transform: rotate(-51deg);
             animation: circle5 3s linear infinite;
+            @include xxxl{
+                top: -11px !important;
+            }
             @include xxl{
                 top: 11px !important;
             }
@@ -556,20 +643,32 @@
                 top: 32px !important;
             }
             @include xll{
-                top: -39px !important;
+                top: -51px !important;
+            }
+            @include lg{
+                top: 96px !important;
+            }
+            @include md{
+                top: 137px !important;
             }
             @keyframes circle5{
                 0% {
                     opacity: 0;
-                    transform: rotate(-25deg) translate(0px, 0px) rotate(-38deg);
+                    transform: rotate(-25deg) translate(0px, -2px) rotate(-38deg);
+                    @include xxxl{
+                        transform: rotate(-25deg) translate(-60px, 24px) rotate(-38deg);
+                    }
                     @include xxl{
                         transform: rotate(-11deg) translate(0px, 0px) rotate(-38deg);
                     }
                     @include xl{
-                        transform: rotate(-11deg) translate(-15px, 13px) rotate(-41deg);
+                        transform: rotate(-13deg) translate(-20px, 8px) rotate(-38deg);
                     }
                     @include xll{
-                        transform: rotate(-15deg) translate(-15px, 13px) rotate(-38deg);
+                        transform: rotate(-25deg) translate(-31px, 10px) rotate(-38deg);
+                    }
+                    @include llg{
+                        transform: rotate(-25deg) translate(-49px, 32px) rotate(-38deg);
                     }
                 }
                 50% {
@@ -578,15 +677,25 @@
                 100% {
                     opacity: 0;
                     transform: rotate(-30deg) translate(40px, -14px) rotate(-22deg);
+                    @include xxxl{
+                        transform: rotate(-30deg) translate(40px, -8px) rotate(-22deg);
+                    }
                     @include xxl{
+                        transform: rotate(-30deg) translate(40px, -8px) rotate(-22deg);
+                    }
+                    @include xl{
                         transform: rotate(-30deg) translate(40px, -5px) rotate(-22deg);
                     }
                     @include xll{
-                        transform: rotate(-30deg) translate(40px, -10px) rotate(-22deg);
+                        transform: rotate(-30deg) translate(40px, -5px) rotate(-22deg);
+                    }
+                    @include llg{
+                        transform: rotate(-30deg) translate(0px, -2px) rotate(-22deg);
                     }
                 }
               }
         }
     }
 }
+
 

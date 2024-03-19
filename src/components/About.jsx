@@ -1,6 +1,7 @@
 import React from "react";
+import ReactPlayer from 'react-player/youtube'
 import { Col, Container, Row } from "react-bootstrap";
-import aboutImg from "../assets/img/robot1.gif";
+import aboutImg from "../assets/img/Halo_NBG.gif";
 import aboutShap from "../assets/img/aboutShap.png";
 import aboutRshap from "../assets/img/aboutRShap.svg";
 export default function About() {
@@ -53,7 +54,6 @@ export default function About() {
                 <figure className="aboutImg">
                   <img src={aboutImg} alt="" />
                 </figure>
-
                 <figure className="aboutShap">
                     <img src={aboutShap} alt="" />
                 </figure>
