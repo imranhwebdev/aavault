@@ -13,17 +13,17 @@ export default function Faq() {
     {
       id: 2,
       title: "How safe is my data?",
-      desc: "Yes, our platform is designed with top-tier security measures to ensure your data and transactions remain safe and confidential.",
+      desc: "The security of your data is our top priority. We use strict security measures to protect your information. In addition, we do not collect or store any personal data beyond what is necessary for the operation of our platform.",
     },
     {
       id: 3,
       title: "Will you have a token?",
-      desc: "Yes, our platform is designed with top-tier security measures to ensure your data and transactions remain safe and confidential.",
+      desc: "Yes, we have a native token for our platform. You can find more information in the tokenomics section of our website.",
     },
     {
       id: 4,
       title: "What blockchains does your platform support?",
-      desc: "Yes, our platform is designed with top-tier security measures to ensure your data and transactions remain safe and confidential.",
+      desc: "Currently, our platform supports Ethereum and Binance Smart Chain (BSC). However, we are constantly working on rapidly adding support for new blockchains and layers to expand the capabilities of our platform.",
     },
   ];
   return (

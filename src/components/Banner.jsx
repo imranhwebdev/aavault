@@ -88,6 +88,7 @@ export default function Banner(){
                 <Row>
                     <Col>
                         <div className="scrollDown text-center d-none d-md-block mt-5">
+                            <a href='#about' class="mouse"></a>
                             <p>Scroll down</p>
                             <a href='#about' className='down'>{arrowDown}</a>
                         </div>
