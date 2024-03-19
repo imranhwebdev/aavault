@@ -180,7 +180,7 @@
             bottom: 134px;
         }
         @include lg{
-            bottom: 145px;
+            bottom: 130px;
         }
         @include md{
             bottom: 115px;
@@ -239,6 +239,20 @@
                 left: 35px;
                 bottom: 45px;
                 max-width: 40px;
+                animation: scrollDown 1.8s infinite;
+                -webkit-animation: scrollDown 1.8s infinite;
+                @keyframes scrollDown {
+                    to {
+                        opacity: 0;
+                        bottom: 25px;
+                    }
+                }
+                @-webkit-keyframes scrollDown {
+                    to {
+                        opacity: 0;
+                        bottom: 25px;
+                    }
+                }
             }
         }
         .roadmap-single-item:nth-child(3) {
@@ -304,6 +318,13 @@
             top: 36px;
             transform: rotate(-11deg);
             animation: circle1 3s linear infinite;
+         
+            @include xl{
+                top: 31px;
+            }
+            @include xll{
+                top: 39px;
+            }
             @keyframes circle1{
                 0% {
                     opacity: 0;
@@ -328,26 +349,51 @@
             margin-bottom: -26px;
         }
         @include lg{
-            margin-bottom: -32px;
+            margin-bottom: -44px;
         }
         @include md{
             margin-bottom: -35px;
         }
         .arrowRight{
-            top: 36px;
-            transform: rotate(-11deg);
+            top: 39px;
             animation: circle2 3s linear infinite;
+            @include xxl{
+                top: 41px;
+            }
+            
+            @include xl{
+                top: 35px;
+            }
+            @include xll{
+                top: 30px;
+            }
+            
             @keyframes circle2{
                 0% {
                     opacity: 0;
-                    transform: rotate(18deg) translate(-20px, -5px) rotate(-15deg);
+                    transform: rotate(14deg) translate(-22px, -7px) rotate(-15deg);
+                    @include xxl{
+                        transform: rotate(16deg) translate(-23px, -5px) rotate(-15deg);
+                    }
+                    @include xll{
+                        transform: rotate(14deg) translate(-20px, -3px) rotate(-15deg);
+                    }
+                    @include xl{
+                        transform: rotate(12deg) translate(-20px, -6px) rotate(-15deg);
+                    }
                 }
                 50% {
                     opacity: 1;
                 }
                 100% {
                     opacity: 0;
-                    transform: rotate(18deg) translate(30px, -21px) rotate(-27deg);
+                    transform: rotate(18deg) translate(30px, -24px) rotate(-27deg);
+                    @include xxl{
+                        transform: rotate(17deg) translate(30px, -26px) rotate(-27deg);
+                    }
+                    @include xl{
+                        transform: rotate(17deg) translate(30px, -25px) rotate(-27deg);
+                    }
                 }
               }
         }
@@ -363,7 +409,7 @@
         }
         
         @include lg{
-            margin-bottom: -32px;
+            margin-bottom: -40px;
         }
         
         @include md{
@@ -372,10 +418,25 @@
         .arrowRight{
             top: -4px !important;
             animation: circle3 3s linear infinite;
+            @include xxl{
+                top: 0 !important;
+            }
+            @include xl{
+                top: -1px !important;
+            }
+            @include xll{
+                top: -8px !important;
+            }
             @keyframes circle3{
                 0% {
                     opacity: 0;
                     transform: rotate(0deg) translate(-20px, 5px) rotate(-15deg);
+                    @include xll{
+                        transform: rotate(0deg) translate(-20px, 0px) rotate(-15deg);
+                    }
+                    @include xl{
+                        transform: rotate(0deg) translate(-20px, 3px) rotate(-15deg);
+                    }
                 }
                 50% {
                     opacity: 1;
@@ -383,6 +444,16 @@
                 100% {
                     opacity: 0;
                     transform: rotate(2deg) translate(30px, -9px) rotate(-27deg);
+                    @include xxl{
+                        transform: rotate(2deg) translate(30px, -8px) rotate(-27deg);
+                    }
+                    
+                    @include xl{
+                        transform: rotate(2deg) translate(30px, -3px) rotate(-27deg);
+                    }
+                    @include xll{
+                        transform: rotate(2deg) translate(30px, -12px) rotate(-27deg);
+                    }
                 }
               }
         }
@@ -406,10 +477,22 @@
         .arrowRight{
             top: -29px !important;
             animation: circle4 3s linear infinite;
+            @include xl{
+                top: -15px !important;
+            }
+            @include xll{
+                top: -40px !important;
+            }
             @keyframes circle4{
                 0% {
                     opacity: 0;
                     transform: rotate(-6deg) translate(-20px, 5px) rotate(-35deg);
+                    @include xl{
+                        transform: rotate(-4deg) translate(-20px, -8px) rotate(-21deg);
+                    }
+                    @include xll{
+                        transform: rotate(-6deg) translate(-20px, -8px) rotate(-35deg);
+                    }
                 }
                 50% {
                     opacity: 1;
@@ -417,6 +500,9 @@
                 100% {
                     opacity: 0;
                     transform: rotate(-10deg) translate(30px, -9px) rotate(-27deg);
+                    @include xll{
+                        transform: rotate(-10deg) translate(30px, -19px) rotate(-27deg);
+                    }
                 }
               }
         }
@@ -434,7 +520,7 @@
         }
         
         @include lg{
-            margin-bottom: -60px;
+            margin-bottom: -38px;
         }
         
         @include md{
@@ -444,10 +530,28 @@
             top: 18px !important;
             transform: rotate(-51deg);
             animation: circle5 3s linear infinite;
+            @include xxl{
+                top: 11px !important;
+            }
+            @include xl{
+                top: 32px !important;
+            }
+            @include xll{
+                top: -39px !important;
+            }
             @keyframes circle5{
                 0% {
                     opacity: 0;
                     transform: rotate(-25deg) translate(0px, 0px) rotate(-38deg);
+                    @include xxl{
+                        transform: rotate(-11deg) translate(0px, 0px) rotate(-38deg);
+                    }
+                    @include xl{
+                        transform: rotate(-11deg) translate(-15px, 13px) rotate(-41deg);
+                    }
+                    @include xll{
+                        transform: rotate(-15deg) translate(-15px, 13px) rotate(-38deg);
+                    }
                 }
                 50% {
                     opacity: 1;
@@ -455,6 +559,12 @@
                 100% {
                     opacity: 0;
                     transform: rotate(-27deg) translate(40px, -5px) rotate(-22deg);
+                    @include xxl{
+                        transform: rotate(-30deg) translate(40px, -5px) rotate(-22deg);
+                    }
+                    @include xll{
+                        transform: rotate(-30deg) translate(40px, -10px) rotate(-22deg);
+                    }
                 }
               }
         }
