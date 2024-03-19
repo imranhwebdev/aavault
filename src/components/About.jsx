@@ -1,5 +1,4 @@
 import React from "react";
-import ReactPlayer from 'react-player/youtube'
 import { Col, Container, Row } from "react-bootstrap";
 import aboutImg from "../assets/img/Halo_NBG.gif";
 import aboutShap from "../assets/img/aboutShap.png";
