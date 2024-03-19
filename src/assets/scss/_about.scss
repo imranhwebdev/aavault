@@ -136,17 +136,17 @@
             text-align: center;
         }
         .aboutImg{
-            max-width: 501px;
+            max-width: 471px;
             @include sm{
-                max-width: 280px;
+                max-width: 350px;
                 margin: 40px auto;
             }
         }
         .aboutShap{
             max-width: 500px;
             position: absolute;
-            right: -60px;
-            bottom: -90px;
+            right: -100px;
+            bottom: -70px;
             z-index: -1;
             @include sm{
                 opacity: .5;
