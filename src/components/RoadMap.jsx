@@ -1,8 +1,9 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import roadmapShap from '../assets/img/roadmapShap.png';
+import roadmapShap from '../assets/img/roadmapShap1.png';
 import roadMapTokenShap from "../assets/img/roadLtokenS.png"
 import dot from "../assets/img/Dot.png"
+import arrowRight from "../assets/img/arrowRight.png"
 import downArrow from "../assets/img/downArrow.png"
 export default function RoadMap() {
   const title = "ROADMAP";
@@ -73,15 +74,59 @@ export default function RoadMap() {
                       <li key={idx}>{roadmapItem}</li>
                     ))}
                   </ul>
+
                 </div>
               ))}
             </div>
           </Col>
         </Row>
-      </Container>
+        <div className="dotArrowWrapper d-flex justify-content-between">
+          <div className="dotArrow d-flex d-none d-md-flex align-items-center gap-5">
+            <figure className='dot'>
+              <img src={dot} alt="" />
+            </figure>
+            <figure className='arrowRight'>
+              <img src={arrowRight} alt="" />
+            </figure>
+          </div>
+          <div className="dotArrow d-flex d-none d-md-flex align-items-center gap-5">
+            <figure className='dot'>
+              <img src={dot} alt="" />
+            </figure>
+            <figure className='arrowRight'>
+              <img src={arrowRight} alt="" />
+            </figure>
+          </div>
+          <div className="dotArrow d-flex d-none d-md-flex align-items-center gap-5">
+            <figure className='dot'>
+              <img src={dot} alt="" />
+            </figure>
+            <figure className='arrowRight'>
+              <img src={arrowRight} alt="" />
+            </figure>
+          </div>
+          <div className="dotArrow d-flex d-none d-md-flex align-items-center gap-5">
+            <figure className='dot'>
+              <img src={dot} alt="" />
+            </figure>
+            <figure className='arrowRight'>
+              <img src={arrowRight} alt="" />
+            </figure>
+          </div>
+          <div className="dotArrow d-flex d-none d-md-flex align-items-center gap-5">
+            <figure className='dot'>
+              <img src={dot} alt="" />
+            </figure>
+            <figure className='arrowRight'>
+              <img src={arrowRight} alt="" />
+            </figure>
+          </div>
+        </div>
       <figure className='roadmap-Shap d-none d-md-block'>
         <img src={roadmapShap} alt="" />
       </figure>
+                  
+      </Container>
     </section>
   )
 }

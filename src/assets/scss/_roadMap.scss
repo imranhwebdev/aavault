@@ -169,8 +169,10 @@
     .roadmap-Shap{
         position: absolute;
         bottom: 85px;
-        left: 70px;
+        left: 50%;
         z-index: -1;
+        transform: translateX(-50%);
+        width: 100%;
         @include md{
             left: 0;
             transform: scale(1.1);
@@ -269,4 +271,125 @@
       
     }
     
+}
+
+
+.dotArrowWrapper{
+    position: relative;
+    z-index: 1;
+    .arrowRight {
+        position: absolute;
+        right: 45px;
+        top: 34px;
+    }
+    
+    .dotArrow{
+        position: relative;
+        width: 100%;
+    }
+    .dotArrow:nth-child(1){
+        transform: translateY(-9px);
+        .arrowRight{
+            top: 36px;
+            transform: rotate(-11deg);
+            animation: circle1 3s linear infinite;
+            @keyframes circle1{
+                0% {
+                    opacity: 0;
+                    transform: rotate(18deg) translate(-20px, -2px) rotate(-15deg);
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                    transform: rotate(18deg) translate(30px, -12px) rotate(-27deg);
+                }
+              }
+        }
+    }
+    .dotArrow:nth-child(2){
+        margin-bottom: -45px;
+        .arrowRight{
+            top: 36px;
+            transform: rotate(-11deg);
+            animation: circle2 3s linear infinite;
+            @keyframes circle2{
+                0% {
+                    opacity: 0;
+                    transform: rotate(18deg) translate(-20px, -5px) rotate(-15deg);
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                    transform: rotate(18deg) translate(30px, -21px) rotate(-27deg);
+                }
+              }
+        }
+    }
+    .dotArrow:nth-child(3){
+        margin-bottom: -38px;
+        .arrowRight{
+            top: -4px !important;
+            animation: circle3 3s linear infinite;
+            @keyframes circle3{
+                0% {
+                    opacity: 0;
+                    transform: rotate(0deg) translate(-20px, 5px) rotate(-15deg);
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                    transform: rotate(2deg) translate(30px, -9px) rotate(-27deg);
+                }
+              }
+        }
+    }
+    .dotArrow:nth-child(4){
+        margin-bottom: 0;
+        margin-top: -55px;
+        .arrowRight{
+            top: -29px !important;
+            animation: circle4 3s linear infinite;
+            @keyframes circle4{
+                0% {
+                    opacity: 0;
+                    transform: rotate(-6deg) translate(-20px, 5px) rotate(-35deg);
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                    transform: rotate(-10deg) translate(30px, -9px) rotate(-27deg);
+                }
+              }
+        }
+    }
+    .dotArrow:nth-child(5){
+        margin-bottom: 0;
+        margin-top: -264px;
+        .arrowRight{
+            top: 18px !important;
+            transform: rotate(-51deg);
+            animation: circle5 3s linear infinite;
+            @keyframes circle5{
+                0% {
+                    opacity: 0;
+                    transform: rotate(-25deg) translate(0px, 0px) rotate(-38deg);
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                    transform: rotate(-27deg) translate(40px, -5px) rotate(-22deg);
+                }
+              }
+        }
+    }
 }
