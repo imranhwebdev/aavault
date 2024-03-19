@@ -173,9 +173,17 @@
         z-index: -1;
         transform: translateX(-50%);
         width: 100%;
+        @include xxl{
+            bottom: 190px;
+        }
+        @include xl{
+            bottom: 134px;
+        }
+        @include lg{
+            bottom: 145px;
+        }
         @include md{
-            left: 0;
-            transform: scale(1.1);
+            bottom: 115px;
         }
     }
     .roadmap-Shap img {
@@ -289,6 +297,9 @@
     }
     .dotArrow:nth-child(1){
         transform: translateY(-9px);
+        @include xll{
+            transform: translateY(-24px);
+        }
         .arrowRight{
             top: 36px;
             transform: rotate(-11deg);
@@ -310,6 +321,18 @@
     }
     .dotArrow:nth-child(2){
         margin-bottom: -45px;
+        @include xl{
+            margin-bottom: -36px;
+        }
+        @include xll{
+            margin-bottom: -26px;
+        }
+        @include lg{
+            margin-bottom: -32px;
+        }
+        @include md{
+            margin-bottom: -35px;
+        }
         .arrowRight{
             top: 36px;
             transform: rotate(-11deg);
@@ -331,6 +354,21 @@
     }
     .dotArrow:nth-child(3){
         margin-bottom: -38px;
+        @include xl{
+            margin-bottom: -26px;
+        }
+        
+        @include xll{
+            margin-bottom: -26px;
+        }
+        
+        @include lg{
+            margin-bottom: -32px;
+        }
+        
+        @include md{
+            margin-bottom: -36px;
+        }
         .arrowRight{
             top: -4px !important;
             animation: circle3 3s linear infinite;
@@ -352,6 +390,19 @@
     .dotArrow:nth-child(4){
         margin-bottom: 0;
         margin-top: -55px;
+        @include xl{
+            margin-top: -55px;
+        }
+        
+        @include xll{
+            margin-bottom: 12px;
+        }
+        @include lg{
+            margin-bottom: -14px;
+        }
+        @include md{
+            margin-bottom: -34px;
+        }
         .arrowRight{
             top: -29px !important;
             animation: circle4 3s linear infinite;
@@ -373,6 +424,22 @@
     .dotArrow:nth-child(5){
         margin-bottom: 0;
         margin-top: -264px;
+        
+        @include xl{
+            margin-top: -240px;
+        }
+        
+        @include xll{
+            margin-bottom: 50px;
+        }
+        
+        @include lg{
+            margin-bottom: -60px;
+        }
+        
+        @include md{
+            margin-bottom: -95px;
+        }
         .arrowRight{
             top: 18px !important;
             transform: rotate(-51deg);
@@ -393,3 +460,4 @@
         }
     }
 }
+
