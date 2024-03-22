@@ -1,23 +1,23 @@
-.hero{
+.hero {
     padding-top: 230px;
     padding-bottom: 275px;
     position: relative;
     z-index: 1;
-    @include lg{
+    @include lg {
         padding-top: 150px;
     }
-    @include mmd{
+    @include mmd {
         padding-bottom: 100px;
     }
-    @include md{
+    @include md {
         padding-top: 130px;
         padding-bottom: 150px;
     }
-    @include sm{
-        padding-top: 190px;
+    @include sm {
+        padding-top: 160px;
         padding-bottom: 100px;
     }
-    &:before{
+    &:before {
         @include beforeAfter;
         left: auto;
         right: 0;
@@ -28,11 +28,11 @@
         background-repeat: no-repeat;
         background-size: contain;
         z-index: -1;
-        @include sm{
+        @include sm {
             display: none;
         }
     }
-    &::after{
+    &::after {
         position: absolute;
         content: "";
         bottom: 100px;
@@ -44,10 +44,11 @@
         background-repeat: no-repeat;
         background-size: contain;
         z-index: -2;
-        @include sm{
+        @include sm {
             width: 280px;
             height: 300px;
             background-image: url("../img/heroResponsiveShap.png");
+            opacity: .3;
         }
     }
     & .heroTopShap {
@@ -57,11 +58,11 @@
         max-width: 534px;
         z-index: -1;
     }
-    
     & .hero-content {
         width: 108%;
-        @include sm{
+        @include sm {
             width: 100%;
+            text-align: center;
         }
         span {
             position: relative;
@@ -73,21 +74,21 @@
             line-height: 21.19px;
             letter-spacing: 5%;
             background: linear-gradient(78.65deg, rgba(25, 249, 195, 0.95) 8.37%, #29D93B 86.44%);
-            border-radius: 25px; 
+            border-radius: 25px;
             -webkit-background-clip: padding-box;
             background-clip: padding-box;
             margin-bottom: 15px;
-            @include linearGradientTxt; 
-            @include md{
+            @include linearGradientTxt;
+            @include md {
                 padding: 6px 11px;
                 font-size: 12px;
             }
-            @include sm{
+            @include sm {
                 padding: 6px 25px;
                 font-size: 10px;
                 margin-bottom: 20px;
             }
-            &::before{
+            &::before {
                 position: absolute;
                 content: "";
                 left: 0;
@@ -101,20 +102,24 @@
                 z-index: -1;
             }
         }
-        
-        
-        h1{
+        h1 {
             background: linear-gradient(90.35deg, #22E16E -112.49%, #FFFFFF 65.05%);
             @include linearGradientTxt;
             text-transform: uppercase;
-           font-weight: 900;
-           @include sm{
-            width: 90%;
-            font-weight: 700;
-           }
+            font-weight: 900;
+            @include sm {
+                // width: 90%;
+            }
+            br{
+                display: none;
+                @include sm{
+                    display: block;
+                }
+            }
         }
-        h2{
-            background: rgb(25,249,195);
+       
+        h2 {
+            background: rgb(25, 249, 195);
             text-transform: uppercase;
             @include font-98;
             font-weight: 400;
@@ -124,30 +129,35 @@
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            @include sm{
+                font-weight: 600;
+            }
         }
-        .subscribeForm{
+        .subscribeForm {
             margin-top: 34px;
             max-width: 457px;
-            @include md{
+            @include md {
                 max-width: 221px;
             }
-            input{
-                color:$white;
+            @include sm{
+                margin: 34px auto 0;
+            }
+            input {
+                color: $white;
                 border-radius: 44px;
                 border: 1.5px solid rgba(25, 249, 195, 0.95);
                 background: rgba(0, 0, 0, 0.50);
-                
-                @include md{
+                @include md {
                     font-size: 10px;
                     height: 32px;
                     padding: 12px;
                 }
             }
-            input::placeholder{
-                color:$white;
+            input::placeholder {
+                color: $white;
                 opacity: 40% !important;
             }
-            .gBtn{
+            .gBtn {
                 background: linear-gradient(78.65deg, rgba(25, 249, 195, 0.95) 8.37%, #29D93B 86.44%);
                 color: $_01000A;
                 text-transform: uppercase;
@@ -157,7 +167,7 @@
                 height: 51px;
                 line-height: 19.26px;
                 border: none;
-                @include md{
+                @include md {
                     font-size: 8.72px;
                     padding: 7px 15px;
                     height: 23px;
@@ -165,55 +175,56 @@
                     right: 4px;
                     top: 51%;
                 }
-                &:hover{
+                &:hover {
                     background: linear-gradient(220deg, rgba(25, 249, 195, 0.95) 8.37%, #29D93B 86.44%);
                 }
             }
         }
-       
     }
-    
-    .hero-right{
+    .hero-right {
         position: relative;
-        z-index: 1;        
-        p{
-           @include font-22;
-           font-weight: 600;
-           color: $_CFCED8; 
-           position: relative;
-           z-index: 1;
-           padding-left: 24px;
-           &::before{
-            position: absolute;
-            content: "";
-            left: 0;
-            top: 0;
-            width: 2px;
-            height: 100%;
-            background: #3B766F;
-           }
-           @include md{
-            font-size: 14px;
-            margin-left: -100px;
-            font-weight: 400;
-           }
-           @include sm{
-            margin-top: 15px;
-            font-size: 16px;
-            font-weight: 400;
-            margin-left: 0px;
-            width: 90%;
-           }
+        z-index: 1;
+        p {
+            @include font-22;
+            font-weight: 600;
+            color: $_CFCED8;
+            position: relative;
+            z-index: 1;
+            padding-left: 24px;
+            &::before {
+                position: absolute;
+                content: "";
+                left: 0;
+                top: 0;
+                width: 2px;
+                height: 100%;
+                background: #3B766F;
+                @include sm{
+                    display: none;
+                }
+            }
+            @include md {
+                font-size: 14px;
+                margin-left: -100px;
+                font-weight: 400;
+            }
+            @include sm {
+                margin-top: 15px;
+                font-size: 16px;
+                font-weight: 400;
+                margin-left: 0px;
+                width: 90%;
+            }
         }
     }
-    & .scrollDown{
-        @include md{
+    & .scrollDown {
+        @include md {
             margin-top: 35px;
         }
         & .mouse {
             width: 28px;
             height: 42px;
-            border: 2px solid rgba(41,217,48,1);
+            border: 2px solid rgba(41, 217, 48, 1);
             border-radius: 60px;
             position: relative;
             margin: 0 auto;
@@ -226,15 +237,15 @@
                 top: 0px;
                 left: 50%;
                 transform: translateX(-50%);
-                background: rgb(25,249,192);
-                background: linear-gradient(90deg, rgba(25,249,192,1) 0%, rgba(41,217,48,1) 100%);
+                background: rgb(25, 249, 192);
+                background: linear-gradient(90deg, rgba(25, 249, 192, 1) 0%, rgba(41, 217, 48, 1) 100%);
                 border-radius: 10px;
                 opacity: 1;
                 animation: wheel 2s infinite;
                 -webkit-animation: wheel 2s infinite;
             }
         }
-        .down{
+        .down {
             position: relative;
             svg {
                 position: absolute;
@@ -245,17 +256,15 @@
                 transform: translate(-50%, -50%);
             }
         }
-        p{
+        p {
             margin-top: 12px;
             margin-bottom: 8px;
             background: var(--1, linear-gradient(79deg, rgba(25, 249, 195, 0.95) 8.37%, #29D93B 86.44%));
             background-clip: text;
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;  
+            -webkit-text-fill-color: transparent;
         }
     }
-   
-    
     @keyframes wheel {
         to {
             opacity: 0;
@@ -268,7 +277,6 @@
             top: 30px;
         }
     }
-    
     @keyframes scrollDown {
         to {
             opacity: 0;
@@ -281,9 +289,7 @@
             top: 25px;
         }
     }
-    
-    
-    .siteC{
+    .siteC {
         color: #FFF;
         font-family: "Syne", sans-serif;
         font-size: 14px;
@@ -295,19 +301,17 @@
         position: absolute;
         left: -270px;
         top: 450px;
-        @include md{
+        @include md {
             font-size: 7px;
             left: -150px;
             top: 350px;
             letter-spacing: 10.38px;
         }
-        @include sm{
-            font-size: 6.227px;
+        @include sm {
+            font-size: 10.227px;
             left: -150px;
             top: 350px;
             letter-spacing: 7.286px;
         }
     }
-  
 }
-

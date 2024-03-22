@@ -47,7 +47,7 @@
     right: 0;
 }
 
-@mixin font-98{
+@mixin font-98 {
     font-size: 98px;
     line-height: 135%;
     @include xxl {
@@ -63,7 +63,7 @@
         font-size: 38px;
     }
     @include sm {
-        font-size: 28px;
+        font-size: 34px;
     }
 }
 
@@ -155,20 +155,21 @@
     }
 }
 
-
 @mixin flex {
     display: flex;
     align-items: center;
 }
 
 @mixin linearGradient {
-    background: rgb(25,249,195);
-    background: linear-gradient(90deg, rgba(25,249,195,1) 0%, rgba(41,217,59,1) 100%);
+    background: rgb(25, 249, 195);
+    background: linear-gradient(90deg, rgba(25, 249, 195, 1) 0%, rgba(41, 217, 59, 1) 100%);
 }
+
 @mixin linearGradient2 {
-    background: rgb(34,225,110);
-    background: linear-gradient(90deg, rgba(34,225,110,1) 0%, rgba(255,255,255,1) 100%);
+    background: rgb(34, 225, 110);
+    background: linear-gradient(90deg, rgba(34, 225, 110, 1) 0%, rgba(255, 255, 255, 1) 100%);
 }
+
 @mixin linearGradientTxt {
     -webkit-background-clip: text;
     background-clip: text;
@@ -176,12 +177,10 @@
 }
 
 @mixin beforeAfter {
-   position: absolute;
-   content: "";
-   left: 0;
-   top: 0;
-   width: 100%;
-   height: 100%;
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
-
-

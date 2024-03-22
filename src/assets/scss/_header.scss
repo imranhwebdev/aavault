@@ -12,9 +12,10 @@
         border-bottom: 1px solid #1A1919;
         background: #050505;
     }
-    .navbar-toggler{
+    .navbar-toggler {
         border: 0;
         padding: 0;
+        margin-left: auto;
     }
     & .navbar-toggler-icon {
         background-image: url('../img/icons8-menu.svg');
@@ -28,7 +29,7 @@
             & .navbar-nav {
                 & a {
                     border-bottom: 1px solid #f3f3f321;
-                    padding:15px 0px;
+                    padding: 15px 0px;
                 }
             }
         }
@@ -42,51 +43,54 @@
             }
         }
     }
-    & .navbar-brand{
-        img{
+    & .navbar-brand {
+        img {
             max-width: 45px;
-            @include md{
+            @include md {
                 max-width: 35px;
             }
         }
-        background: linear-gradient(93deg, #19F9C3 3.88%, rgba(41, 217, 59, 0.05) 134.14%);
+        background: linear-gradient(93deg,
+        #19F9C3 3.88%,
+        rgba(41, 217, 59, 0.05) 134.14%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 31px;
         font-weight: 900;
-        line-height: 139%; /* 43.09px */
+        line-height: 139%;
+        /* 43.09px */
         text-transform: uppercase;
-        @include mmd{
+        @include mmd {
             font-size: 20px;
         }
     }
-    & .boxedBtn{
+    & .boxedBtn {
         margin-left: 20px;
-        @include lg{
+        @include lg {
             font-size: 14px;
             padding: 10px 20px;
         }
-        @include md{
+        @include md {
             font-size: 12px;
             padding: 6px 14px;
             margin-left: 10px;
         }
-        @include sm{
+        @include sm {
             font-size: 12px;
             padding: 10px 20px;
             margin-left: 0px;
-           margin-top: 22px;
+            margin-top: 22px;
         }
     }
 }
 
-.navbar-nav  {
+.navbar-nav {
     a {
         display: block;
         color: $_7A807F !important;
         font-size: 18px;
-        padding:5px 20px;
+        padding: 5px 20px;
         text-transform: capitalize;
         letter-spacing: -0.54px;
         cursor: pointer;
@@ -95,20 +99,19 @@
         &:focus {
             color: $white !important;
         }
-        @include lg{
+        @include lg {
             padding: 5px 15px;
             font-size: 16px;
         }
-        @include md{
+        @include md {
             padding: 5px 10px;
             font-size: 14px;
         }
     }
-    
-    
 }
-.heading{
-    &.fixed{
+
+.heading {
+    &.fixed {
         position: fixed;
         background-color: $black;
         transition: all .3s ease-in-out;

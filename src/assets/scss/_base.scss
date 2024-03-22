@@ -3,70 +3,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
 html,
 html body {
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
-  @include sm{
-    display: none;
-  }
+    width: 8px;
+    @include sm {
+        display: none;
+    }
 }
+
 div::-webkit-scrollbar {
-  width: 4px;
-  @include sm{
-    display: none;
-  }
+    width: 4px;
+    @include sm {
+        display: none;
+    }
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    78.65deg,
-    rgba(25, 249, 195, 0.95) 8.37%,
-    #29d93b 86.44%
-  );
-  border-radius: 20px;
-  @include sm{
-    display: none;
-  }
+    background: linear-gradient( 78.65deg, rgba(25, 249, 195, 0.95) 8.37%, #29d93b 86.44%);
+    border-radius: 20px;
+    @include sm {
+        display: none;
+    }
 }
+
 div::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    78.65deg,
-    rgba(25, 249, 195, 0.95) 8.37%,
-    #29d93b 86.44%
-  );
-  @include sm{
-    display: none;
-  }
+    background: linear-gradient( 78.65deg, rgba(25, 249, 195, 0.95) 8.37%, #29d93b 86.44%);
+    @include sm {
+        display: none;
+    }
 }
 
 body {
-  position: relative;
-  z-index: 1;
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 160%;
-  background-color: #000000;
-  &:before{
-    @include beforeAfter;
-    background-image: url("../img/hero-shap1.png");
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-size: 75%;
-    z-index: -1;
-    @include lg{
-        background-size: contain;
-        background-position: 10px top;
+    position: relative;
+    z-index: 1;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 160%;
+    background-color: #000000;
+    &:before {
+        @include beforeAfter;
+        background-image: url("../img/hero-shap1.png");
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: 75%;
+        z-index: -1;
+        @include lg {
+            background-size: contain;
+            background-position: 10px top;
+        }
+        @include sm {
+            background-size: contain;
+            top: 0;
+            height: 50%;
+            background-position: top center;
+        }
     }
-    @include sm{
-        background-size: contain;
-        top: 0;
-        height: 50%;
-        background-position: top center;
-    }
-}  
 }
 
 h1,
@@ -75,288 +69,270 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
 }
+
 h1 {
-  @include font-98;
+    @include font-98;
 }
+
 h2 {
-  @include font-56;
+    @include font-56;
 }
+
 h3 {
-  @include font-32;
+    @include font-32;
 }
+
 h4 {
-  @include font-28;
+    @include font-28;
 }
+
 h5 {
-  @include font-18;
+    @include font-18;
 }
+
 p {
-  margin: 0;
+    margin: 0;
 }
 
 img {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
+
 figure {
-  margin: 0;
+    margin: 0;
 }
+
 ul,
 ol {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 a {
-  text-decoration: none !important;
-  @include transition;
+    text-decoration: none !important;
+    @include transition;
 }
 
 input,
 textarea,
 button {
-  padding: 10px 25px;
-  outline: none;
-  @include transition;
+    padding: 10px 25px;
+    outline: none;
+    @include transition;
 }
 
 input:focus,
 textarea:focus,
 button:focus {
-  outline: none;
-  border-color: #f3f3f3;
+    outline: none;
+    border-color: #f3f3f3;
 }
 
 nav ul li {
-  display: inline-block;
-  position: relative;
-  @include transition;
+    display: inline-block;
+    position: relative;
+    @include transition;
 }
 
+
 /*Hide number spin button*/
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .container {
-  --bs-gutter-x: 30px;
-  @media (min-width: 1366px) {
-    max-width: 1320px;
-  }
+    --bs-gutter-x: 30px;
+    @media (min-width: 1366px) {
+        max-width: 1320px;
+    }
 }
 
 .boxedBtn {
-  text-transform: uppercase;
-  display: inline-block;
-  font-size: 18px;
-  line-height: 160%;
-  font-weight: 600;
-  color: $white;
-  padding: 12px 29px;
-  border-radius: 40px;
-  background: rgb(29, 73, 61);
-  background: linear-gradient(
-    90deg,
-    rgba(29, 73, 61, 1) 0%,
-    rgba(33, 70, 37, 1) 100%
-  );
-  position: relative;
-  border: 1px solid transparent;
-  background-clip: padding-box;
-  &::after {
-    content: "";
-    position: absolute;
-    top: -1px;
-    bottom: -1px;
-    left: -1px;
-    right: -1px;
-    background: rgb(25, 249, 195);
-    background: linear-gradient(
-      90deg,
-      rgba(25, 249, 195, 1) 0%,
-      rgba(41, 217, 59, 1) 100%
-    );
-    z-index: -1;
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 160%;
+    font-weight: 600;
+    color: $white;
+    padding: 12px 29px;
     border-radius: 40px;
-  }
-  &:hover {
-    color: $_hover;
-  }
+    background: rgb(29, 73, 61);
+    background: linear-gradient( 90deg, rgba(29, 73, 61, 1) 0%, rgba(33, 70, 37, 1) 100%);
+    position: relative;
+    border: 1px solid transparent;
+    background-clip: padding-box;
+    &::after {
+        content: "";
+        position: absolute;
+        top: -1px;
+        bottom: -1px;
+        left: -1px;
+        right: -1px;
+        background: rgb(25, 249, 195);
+        background: linear-gradient( 90deg, rgba(25, 249, 195, 1) 0%, rgba(41, 217, 59, 1) 100%);
+        z-index: -1;
+        border-radius: 40px;
+    }
+    &:hover {
+        color: $_hover;
+    }
 }
 
 .social-links {
-  position: absolute;
-  top: 25%;
-  right: 12%;
-  z-index: 99;
-  @include lg{
-    right: 5%;
-  }
-  @include md{
-    right: 5%;
-  }
-  @include sm{
-    display: none;
-  }
-  li {
-    margin-bottom: 32px;
-    a {
-      display: flex;
-      border: 1px solid #0d4614;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      justify-content: center;
-      align-items: center;
-      transition: all .3s;
-      img {
-        max-width: 16px;
-      }
-      &:hover{
-        transform: rotate(360deg);
-      }
+    position: absolute;
+    top: 25%;
+    right: 12%;
+    z-index: 99;
+    @include lg {
+        right: 5%;
     }
-  }
+    @include md {
+        right: 5%;
+    }
+    @include sm {
+        display: none;
+    }
+    li {
+        margin-bottom: 32px;
+        a {
+            display: flex;
+            border: 1px solid #0d4614;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            transition: all .3s;
+            img {
+                max-width: 16px;
+            }
+            &:hover {
+                filter: brightness(0) invert(1);
+                // transform: rotate(360deg);
+            }
+        }
+    }
 }
 
 .subscribeForm {
-  position: relative;
-  & input {
-    background-color: #000000;
-    color: $white !important;
-    border-radius: 44px !important;
-    padding: 15px 19px;
-    height: 64px;
-    @include font-18;
-    width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(0, 0, 0, 0.6);
-  }
-  & input::placeholder {
-    color: $white !important;
-    text-transform: capitalize;
-    opacity: 20%;
-  }
-  & button {
-    position: absolute;
-    right: 9px;
-    top: 50%;
-    transform: translateY(-50%);
-    @include linearGradient;
-    border-radius: 30px !important;
-    width: 86px;
-    height: 48px;
-    z-index: 99;
-    border: 0;
-    transition: all .3s ease-in-out;
-    svg{
-      margin-top: -3px;
-      position: absolute;
-      left: 25px;
-      animation: animateRf 1.8s infinite;
-      -webkit-animation: animateRf 2.5s infinite;
-      top: 55%;
-      transform: translate(-50%, -50%);
-      @keyframes animateRf {
-        to {
-            opacity: 0;
-            left: 60px;
+    position: relative;
+    & input {
+        background-color: #000000;
+        color: $white !important;
+        border-radius: 44px !important;
+        padding: 15px 19px;
+        height: 64px;
+        @include font-18;
+        width: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(0, 0, 0, 0.6);
+    }
+    & input::placeholder {
+        color: $white !important;
+        text-transform: capitalize;
+        opacity: 20%;
+    }
+    & button {
+        position: absolute;
+        right: 9px;
+        top: 50%;
+        transform: translateY(-50%);
+        @include linearGradient;
+        border-radius: 30px !important;
+        width: 86px;
+        height: 48px;
+        z-index: 99;
+        border: 0;
+        transition: all .3s ease-in-out;
+        svg {
+            margin-top: -3px;
+            position: absolute;
+            left: 25px;
+            animation: animateRf 1.8s infinite;
+            -webkit-animation: animateRf 2.5s infinite;
+            top: 55%;
+            transform: translate(-50%, -50%);
+            @keyframes animateRf {
+                to {
+                    opacity: 0;
+                    left: 60px;
+                }
+            }
+            @-webkit-keyframes animateRf {
+                to {
+                    opacity: 0;
+                    left: 60px;
+                }
+            }
+        }
+        &:hover {
+            background: linear-gradient(220deg, rgba(25, 249, 195, 0.95) 8.37%, #29D93B 86.44%), linear-gradient(172deg, #3B36FF 13.87%, #8C89FF 79.76%, #FFF 120.95%);
         }
     }
-    @-webkit-keyframes animateRf {
-        to {
-            opacity: 0;
-            left: 60px;
-        }
-    }
-    }
-    &:hover{
-      background: linear-gradient(220deg, rgba(25, 249, 195, 0.95) 8.37%, #29D93B 86.44%), linear-gradient(172deg, #3B36FF 13.87%, #8C89FF 79.76%, #FFF 120.95%);
-    }
-  }
 }
 
 .inlineBtn {
-  background: var(
-    --1,
-    linear-gradient(79deg, rgba(25, 249, 195, 0.95) 8.37%, #29d93b 86.44%)
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 700;
-  letter-spacing: -0.54px;
-  text-transform: capitalize;
-  border-radius: 40px;
-
-  border: 1px solid var(--1, rgba(25, 249, 195, 0.95));
-  backdrop-filter: blur(10px);
-  display: inline-block;
-  padding: 16px 40px;
+    background: var( --1, linear-gradient(79deg, rgba(25, 249, 195, 0.95) 8.37%, #29d93b 86.44%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    letter-spacing: -0.54px;
+    text-transform: capitalize;
+    border-radius: 40px;
+    border: 1px solid var(--1, rgba(25, 249, 195, 0.95));
+    backdrop-filter: blur(10px);
+    display: inline-block;
+    padding: 16px 40px;
 }
 
 .section-title {
-  h2 {
-    color: $_D9D9D9;
-    text-transform: uppercase;
-    font-weight: 800;
-    text-shadow: 0px 4px 8.6px rgba(0, 0, 0, 0.25);
-    @include sm{
-      background: linear-gradient(90deg, #22E16E -112.46%, #FFF 71.85%);
-      @include linearGradientTxt;
-      line-height: 145%;
+    h2 {
+        color: $_D9D9D9;
+        text-transform: uppercase;
+        font-weight: 800;
+        text-shadow: 0px 4px 8.6px rgba(0, 0, 0, 0.25);
+        @include sm {
+            background: linear-gradient(90deg, #22E16E -112.46%, #FFF 71.85%);
+            @include linearGradientTxt;
+            line-height: 145%;
+        }
+        span {
+            background: linear-gradient(90deg, #22E16E -112.46%, #FFF 71.85%);
+            @include linearGradientTxt;
+        }
     }
-    span{
-      background: linear-gradient(90deg, #22E16E -112.46%, #FFF 71.85%);
-      @include linearGradientTxt;
+    span {
+        font-family: "Bruno Ace", sans-serif;
+        font-weight: 400;
+        line-height: 135%;
+        text-transform: uppercase;
     }
-  }
-  span {
-    font-family: "Bruno Ace", sans-serif;
-    font-weight: 400;
-    line-height: 135%;
-    text-transform: uppercase;
-  }
-  .subTitle{
-    @include sm{
-      font-size: 12px;
-      display: block !important;
+    .subTitle {
+        @include sm {
+            font-size: 12px;
+            display: block !important;
+        }
     }
-  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .goog-te-gadget {
-  img{
-    display: none;
-  }
-  a{
-    font-size: 0;
-  }
+    img {
+        display: none;
+    }
+    a {
+        font-size: 0;
+    }
 }
-.skiptranslate{
-  font-size: 0;
+
+.skiptranslate {
+    font-size: 0;
 }

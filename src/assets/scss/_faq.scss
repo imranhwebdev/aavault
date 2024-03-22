@@ -1,214 +1,196 @@
 .faqArea {
-  padding-top: 77px;
-  padding-bottom: 60px;
-  position: relative;
-  z-index: 1;
-  @include mmd {
-    padding-top: 30px;
-    border-top: 3px solid rgba(255, 255, 255, 0.146);
-    border-bottom: 3px solid rgba(255, 255, 255, 0.146);
-  }
-  @include sm {
-    padding-bottom: 40px;
-  }
-  &::before {
-    @include beforeAfter;
-    background-image: url("../img/faq-shap1.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top left;
-    z-index: -1;
-    top: -20%;
-    width: 50%;
-    height: 70%;
-    @include mmd {
-      width: 300px;
-      height: 400px;
-      top: -18%;
-    }
-  }
-  &::after {
-    @include beforeAfter;
-    left: auto;
-    right: 0;
-    background-image: url("../img/faq-shap2.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top right;
-    z-index: -1;
-    top: -32%;
-    @include xl {
-      top: -30%;
-    }
-    @include lg {
-      top: -30%;
-    }
-    @include mmd {
-      background-image: none;
-      opacity: 0.1;
-      background: #5b5858;
-      backdrop-filter: blur(214.5041961669922px);
-      top: 0;
-    }
-  }
-  .faqWrapper {
-    padding: 48px 60px;
-    border-radius: 26.75px;
+    padding-top: 77px;
+    padding-bottom: 60px;
     position: relative;
     z-index: 1;
-    overflow: hidden;
     @include mmd {
-      padding-left: 0;
-      padding-right: 0;
-      padding-bottom: 0;
+        padding-top: 30px;
+        border-top: 2px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     }
-    @include mmd {
-      padding-top: 25px;
-      padding-bottom: 0;
+    @include sm {
+        padding-bottom: 40px;
     }
     &::before {
-      @include beforeAfter;
-      background: #5b58581a;
-      border: 3px solid rgba(255, 255, 255, 0.5);
-      filter: blur(334.3756103515625px);
-      border-radius: 26.75px;
-      z-index: -1;
-      @include mmd {
-        display: none;
-      }
+        @include beforeAfter;
+        background-image: url("../img/faq-shap1.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top left;
+        z-index: -1;
+        top: -20%;
+        width: 50%;
+        height: 70%;
+        @include mmd {
+            width: 300px;
+            height: 400px;
+            top: -32%;
+        }
     }
     &::after {
-      @include beforeAfter;
-      border: 3px solid rgba(255, 255, 255, 0.5);
-      border-radius: 26.75px;
-      opacity: 0.1;
-      z-index: -1;
-      @include mmd {
-        display: none;
-      }
+        @include beforeAfter;
+        left: auto;
+        right: 0;
+        background-image: url("../img/faq-shap2.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top right;
+        z-index: -1;
+        top: -32%;
+        @include xl {
+            top: -30%;
+        }
+        @include lg {
+            top: -30%;
+        }
+        @include mmd {
+            background-image: none;
+            opacity: 0.1;
+            background: #5b5858;
+            backdrop-filter: blur(214.5041961669922px);
+            top: 0;
+        }
     }
-  }
-
-  & .accordion-item {
-    background: transparent;
-    border: 0;
-    padding: 40px 0px;
-    border-bottom: 2px solid rgba(91, 120, 101, 0.4);
-    &::last-child {
-      border-bottom: 0;
+    .faqWrapper {
+        padding: 48px 60px;
+        border-radius: 26.75px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        @include mmd {
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 0;
+        }
+        @include mmd {
+            padding-top: 25px;
+            padding-bottom: 0;
+        }
+        &::before {
+            @include beforeAfter;
+            background: #5b58581a;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+            filter: blur(334.3756103515625px);
+            border-radius: 26.75px;
+            z-index: -1;
+            @include mmd {
+                display: none;
+            }
+        }
+        &::after {
+            @include beforeAfter;
+            border: 3px solid rgba(255, 255, 255, 0.5);
+            border-radius: 26.75px;
+            opacity: 0.1;
+            z-index: -1;
+            @include mmd {
+                display: none;
+            }
+        }
     }
-
-    @include md {
-      padding: 24px 10px;
+    & .accordion-item {
+        background: transparent;
+        border: 0;
+        padding: 40px 0px;
+        border-bottom: 2px solid rgba(91, 120, 101, 0.4);
+        @include sm {
+            border-bottom-width: 1px;
+        }
+        &::last-child {
+            border-bottom: 0;
+        }
+        @include md {
+            padding: 24px 10px;
+        }
+        @include sm {
+            padding: 20px 10px;
+        }
+        & .accordion-button {
+            color: rgba(255, 255, 255, 0.7);
+            @include font-28;
+            font-weight: 700;
+            line-height: 140%;
+            text-transform: capitalize;
+            padding: 0;
+            width: 100%;
+            gap: 32px;
+            --arrow-width: 66px;
+            --padding-left: 32px;
+            padding-left: calc(var(--arrow-width) + var(--padding-left));
+            @include lg {
+                --padding-left: 24px;
+            }
+            @include md {
+                --arrow-width: 38px;
+                --padding-left: 22px;
+            }
+            @include mmd {
+                font-size: 18px;
+                gap: 16px;
+            }
+            @include sm {
+                gap: 15px;
+                font-weight: 600;
+                --arrow-width: 36px;
+                --padding-left: 16px;
+            }
+        }
+        & .accordion-body {
+            color: $_8C8C8C;
+            @include font-22;
+            font-weight: 500;
+            text-transform: capitalize;
+            line-height: 170%;
+            padding-left: 90px;
+            max-width: 95%;
+            padding-bottom: 0;
+            @include md {
+                font-size: 12.74px;
+                padding-left: 54px;
+            }
+            @include sm {
+                max-width: 100%;
+                padding-left: 24px;
+                font-size: 12px;
+                padding-right: 0;
+            }
+        }
     }
-    @include sm {
-      padding: 20px 10px;
+    & .accordion-item:last-child {
+        border: 0 !important;
+        padding-bottom: 5px;
     }
-    & .accordion-button {
-      color: rgba(255, 255, 255, 0.7);
-      @include font-28;
-      font-weight: 700;
-      line-height: 140%;
-      text-transform: capitalize;
-      padding: 0;
-      width:100%;
-      padding-left: 96px;
-      gap: 32px;
-      @include mmd {
-        font-size: 18px;
-        gap: 16px;
-        padding-left: 60px;
-      }
-      @include sm {
-        gap: 15px;
-        font-weight: 600;
-        padding-left: 30px;
-      }
+    & .accordion {
+        --bs-accordion-border-color: transparent;
+        --bs-accordion-btn-focus-border-color: transparent;
+        --bs-accordion-btn-focus-box-shadow: 0 0 0 0rem transparent;
+        --bs-accordion-inner-border-radius: 10px - 10px;
     }
-    & .accordion-body {
-      color: $_8C8C8C;
-      @include font-22;
-      font-weight: 500;
-      text-transform: capitalize;
-      line-height: 170%;
-      padding-left: 96px;
-      max-width: 95%;
-      padding-bottom: 0;
-      @include md {
-        font-size: 12.74px;
-        padding-left: 60px;
-      }
-      @include sm {
-        max-width: 100%;
-        padding-left: 30px;
-        font-size: 12px;
-        padding-right: 0;
-      }
+    .accordion-button:not(.collapsed)::after {
+        background-image: url("../img/minus.svg");
+        @include transition;
     }
-  }
-  & .accordion-item:last-child {
-    border: 0 !important;
-    padding-bottom: 5px;
-  }
-  & .accordion {
-    --bs-accordion-border-color: transparent;
-    --bs-accordion-btn-focus-border-color: transparent;
-    --bs-accordion-btn-focus-box-shadow: 0 0 0 0rem transparent;
-    --bs-accordion-inner-border-radius: 10px - 10px;
-  }
-  .accordion-button:not(.collapsed)::after {
-    background-image: url("../img/minus.svg");
-    @include transition;
-    left: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    @include sm {
-      background-size: 22px !important;
-      width: 22px !important;
-      height: 22px !important;
+    .accordion-button::after {
+        background-image: url("../img/plus.svg");
+        @include transition;
+        background-size: var(--arrow-width) !important;
+        width: var(--arrow-width) !important;
+        height: var(--arrow-width) !important;
+        position: absolute;
+        left: 0;
     }
-  }
-  .accordion-button::after {
-    background-image: url("../img/plus.svg");
-    @include transition;
-    background-size: 66px;
-    width: 66px;
-    height: 66px;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    @include md {
-      background-size: 38px !important;
-      width: 38px !important;
-      height: 38px !important;
+    h2.accordion-header {
+        background: transparent !important;
     }
-    @include sm {
-      background-size: 22px !important;
-      width: 22px !important;
-      height: 22px !important;
+    button.accordion-button {
+        background: transparent !important;
     }
-  }
-
-  h2.accordion-header {
-    background: transparent !important;
-  }
-
-  button.accordion-button {
-    background: transparent !important;
-  }
-  .faqShap{
-    position: absolute;
-    right: 0;
-    bottom: -130px;
-    width: 300px;
-    height: 300px;
-    z-index: -1;
-  }
-}
-
-.accordion-header{
-  word-break: break-word;
-  overflow-wrap: break-word;
+    .faqShap {
+        position: absolute;
+        right: 0;
+        bottom: -130px;
+        width: 300px;
+        height: 300px;
+        z-index: -1;
+    }
 }

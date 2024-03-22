@@ -38,7 +38,7 @@ export default function Faq() {
               <Accordion>
                 {accordionData.map(item => (
                   <Accordion.Item key={item.id} eventKey={item.id.toString()}>
-                    <Accordion.Header  className="accordion-header">{item.title}</Accordion.Header>
+                    <Accordion.Header className="text-wrap">{item.title}</Accordion.Header>
                     <Accordion.Body>{item.desc}</Accordion.Body>
                   </Accordion.Item>
                 ))}
