@@ -197,8 +197,10 @@
         right: -310px;
         top: 520px;
         @include sm{
-            right: -275px;
-            font-style: 12px;
+            right: -150px;
+            font-size: 10.227px;
+            letter-spacing: 7px;
+            top: 260px;
         }
     }
 }
