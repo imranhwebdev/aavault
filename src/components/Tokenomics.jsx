@@ -30,6 +30,12 @@ export default function Tokenomics() {
       color: '#1FF634'
     },
     {
+      label: "Marketing",
+      data: "5",
+      value: "500,000,000",
+      color: '#7CFB89'
+    },
+    {
       label: "Team and Advisers",
       data: "16",
       value: "1.600.000.000",
@@ -49,7 +55,7 @@ export default function Tokenomics() {
     },
     {
       label: "Foundation",
-      data: "15",
+      data: "10",
       value: "1.100.000.000",
       color: '#19F9F9'
     },
